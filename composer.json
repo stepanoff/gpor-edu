@@ -1,0 +1,7 @@
+{
+    "require": {
+        "yiisoft/yii": "*",
+        "twitter/bootstrap": "*"
+    },
+    "minimum-stability": "dev"
+}
