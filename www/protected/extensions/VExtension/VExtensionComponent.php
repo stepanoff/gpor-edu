@@ -5,6 +5,7 @@ class VExtensionComponent extends CComponent {
     public $modules = array ();
     public $components;
     public $staticUrl = '/';
+    public $useBootstrap = true;
 
     protected $assetsPath = '';
     protected $assetsUrl = '';
@@ -40,6 +41,19 @@ class VExtensionComponent extends CComponent {
 
     public function getViewsAlias () {
         return $this->extensionAlias . '.views';
+    }
+
+    public function registerBootstrap () {
+        if ($this->useBootstrap) {
+            $assetsPath = VENDOR_PATH . DIRECTORY_SEPARATOR . 'twitter' . DIRECTORY_SEPARATOR . 'bootstrap' . DIRECTORY_SEPARATOR . 'docs' . DIRECTORY_SEPARATOR . 'assets';
+            $url = Yii::app()->assetManager->publish($assetsPath, false, -1, YII_DEBUG);
+            $cs = Yii::app()->clientScript;
+
+            $cs->registerCssFile($url.'/css/bootstrap.css');
+            $cs->registerCssFile($url.'/css/bootstrap-responsive.css');
+            $cs->registerCssFile($url.'/css/docs.css');
+            $cs->registerScriptFile($url.'/js/bootstrap.min.js', CClientScript::POS_HEAD);
+        }
     }
 
 }

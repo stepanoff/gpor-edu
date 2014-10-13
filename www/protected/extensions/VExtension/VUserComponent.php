@@ -151,7 +151,7 @@ class VUserComponent extends CWebUser implements IWebUser
         $className = $this->dbDriver;
         $this->_dbDriver = new $className;
 
-		parent::init();
+        parent::init();
 
 		Yii::app()->getSession()->open();
 		if($this->getIsGuest() && $this->allowAutoLogin)
@@ -775,7 +775,7 @@ class VUserComponent extends CWebUser implements IWebUser
 		}
 	}
 
-    public function checkAccess($operation,$params=array(), $allowCaching = true)
+    public function checkAccess($operation,$params=array())
     {
         if(parent::checkAccess('superAdmin',$params, $allowCaching))
             return true;
