@@ -1,4 +1,11 @@
 {
+    "name": "stepanoff/gpor-edu",
+    "authors": [
+        {
+            "name": "stepanoff",
+            "email": "stenlex@gmail.com"
+        }
+    ],
     "require": {
         "yiisoft/yii": "*",
         "twitter/bootstrap": "*"

@@ -1,7 +1,7 @@
 <?php
 class VExtensionComponent extends CComponent {
 
-    public $extensionAlias = 'ext.VExtension';
+    public $extensionAlias = 'application.extensions.VExtension';
     public $modules = array ();
     public $components;
     public $staticUrl = '/';
@@ -45,13 +45,13 @@ class VExtensionComponent extends CComponent {
 
     public function registerBootstrap () {
         if ($this->useBootstrap) {
-            $assetsPath = VENDOR_PATH . DIRECTORY_SEPARATOR . 'twitter' . DIRECTORY_SEPARATOR . 'bootstrap' . DIRECTORY_SEPARATOR . 'docs' . DIRECTORY_SEPARATOR . 'assets';
+            $assetsPath = VENDOR_PATH . DIRECTORY_SEPARATOR . 'twitter' . DIRECTORY_SEPARATOR . 'bootstrap' . DIRECTORY_SEPARATOR . 'dist';
             $url = Yii::app()->assetManager->publish($assetsPath, false, -1, YII_DEBUG);
             $cs = Yii::app()->clientScript;
 
             $cs->registerCssFile($url.'/css/bootstrap.css');
             $cs->registerCssFile($url.'/css/bootstrap-responsive.css');
-            $cs->registerCssFile($url.'/css/docs.css');
+            //$cs->registerCssFile($url.'/css/docs.css');
             $cs->registerScriptFile($url.'/js/bootstrap.min.js', CClientScript::POS_HEAD);
         }
     }

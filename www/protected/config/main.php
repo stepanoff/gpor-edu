@@ -41,7 +41,6 @@ $mainConfig = array(
         'application.models.forms.*',
 		'application.components.*',
 		'application.extensions.*',
-        'ext.eauth.*',
         'ext.eauth.services.*',
         'ext.eoauth.*',
         'ext.lightopenid.*',
@@ -93,15 +92,9 @@ $mainConfig = array(
             'class' => 'ExtendedRequestComponent',
             'staticUrl' => $params['staticUrl'],
         ),
-        'favorites' => array(
-            'class' => 'VitrinaFavoritesComponent',
-        ),
         'assetManager' => array(
             'class' => 'CAssetManager',
             'basePath' => dirname(__FILE__).DS.'..'.DS.'..'.DS.'assets',
-        ),
-        'loid' => array(
-            'class' => 'ext.lightopenid.loid',
         ),
         'VExtension' => array (
             'class' => 'ext.VExtension.VExtensionComponent',
