@@ -7,19 +7,19 @@
  */
 class VFormRender extends CForm
 {
-    public $formInputLayout = '<div class="control-group"><div class="control-label">{label}</div><div class="controls">{input}{hint}<div class="form-row__error">{error}</div></div></div>';
-    public $buttonsLayout = '<div class="control-group"><div class="control-label"></div><div class="controls">{buttons}</div></div>';
+    public $formInputLayout = '<div class="form-group"><div class="control-label">{label}</div><div class="controls">{input}{hint}<div class="form-row__error">{error}</div></div></div>';
+    public $buttonsLayout = '<div class="form-group"><div class="control-label"></div><div class="controls">{buttons}</div></div>';
     public $buttonLayout = '{button} ';
     public $formInputsLayout = '{elements}';
     public $formErrorLayout = '{error}';
     public $stepJs = false;
     public $defaultClasses = array(
-        'text'=>'grid-span-7',
-        'password'=>'grid-span-7',
-        'textarea'=>'grid-span-9',
-        'file'=>'grid-span-7',
-        'listbox'=>'grid-span-7',
-        'dropdownlist'=>'grid-span-7',
+        'text'=>'form-control',
+        'password'=>'form-control',
+        'textarea'=>'form-control',
+        'file'=>'form-control',
+        'listbox'=>'form-control',
+        'dropdownlist'=>'form-control',
     );
     public $renderSafeAttributes = false;
     public $startPageIndex = false;

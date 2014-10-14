@@ -22,13 +22,13 @@ class VAdminFilterBuilderWidget extends CWidget
         $this->registerAssets();
 
         echo CHtml::openTag('div', array('class' => 'navbar'));
-        echo CHtml::openTag('div', array('class' => 'navbar-inner', 'style' => 'padding-top: 10px;'));
+        echo CHtml::openTag('div', array('class' => 'navbar-inner', 'style' => 'padding-top: 60px;'));
 
         $form->activeForm = array_merge($this->defaultOptions, $form->activeForm );
-        $form->formInputLayout = '<div class="span3">{label}{input}{hint}<div class="form-row__error">{error}</div></div>';
-        $form->buttonsLayout = '<div class="span2">{buttons}</div></div>';
-        $form->buttonLayout = '<div class="span6">{button}</div>';
-        $form->formInputsLayout = '<div class="row-fluid"><div class="span10">{elements}</div>';
+        $form->formInputLayout = '<div class="col-xs-6 col-md-3"><div class="form-group">{label}{input}{hint}<div class="form-row__error">{error}</div></div></div>';
+        $form->buttonsLayout = '<div class="col-xs-3 col-md-3"><div class="row">{buttons}</div></div></div>';
+        $form->buttonLayout = '<div class="col-xs-12 col-md-6"><div class="form-group"><label for="">&nbsp;</label>{button}</div></div>';
+        $form->formInputsLayout = '<div class="row"><div class="col-xs-9 col-md-9"><div class="row">{elements}</div></div>';
         $form->formErrorLayout = '{error}';
 
         echo $form->render();
