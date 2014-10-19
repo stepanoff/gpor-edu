@@ -152,7 +152,7 @@ class Institution extends CActiveRecord
                 if ($tmp) {
                     $_tmp = array();
                     foreach ($tmp as $key => $value) {
-                        if (empty($value['customText'])) {
+                        if (empty($value['text'])) {
                             continue;
                         }
                         $_tmp[] = $value;

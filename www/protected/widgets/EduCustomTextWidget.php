@@ -2,7 +2,7 @@
 /**
  * 
  */
-class EduPhonesWidget extends CWidget
+class EduCustomTextWidget extends CWidget
 {
     public $model;
     public $attribute;

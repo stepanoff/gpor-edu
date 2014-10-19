@@ -1,7 +1,9 @@
 <div id="customText_<?php echo $inputId; ?>"></div>
 
 <style>
-.customText__row__input {width: 200px; display: inline;}
+.customText__row__cutomTextInput {
+	width: 50%;
+}
 </style>
 
 <script type="text/javascript">
@@ -20,14 +22,14 @@ jQuery(function($) {
 			addBtn = addBtn ? addBtn : false;
 			var customTextInput = $('<input>');
 			customTextInput.attr("type", "text");
-			customTextInput.attr("name", options['inputName']+"["+currentIndex+"][customText]");
-			customTextInput.attr("value", data['customText']);
+			customTextInput.attr("name", options['inputName']+"["+currentIndex+"][title]");
+			customTextInput.attr("value", data['title']);
 			customTextInput.attr("class", "form-control customText__row__input customText__row__customTextInput");
 
 			var customTextTextInput = $('<textarea>');
 			customTextTextInput.attr("type", "text");
 			customTextTextInput.attr("name", options['inputName']+"["+currentIndex+"][text]");
-			customTextTextInput.attr("value", data['text']);
+			customTextTextInput.val(data['text']);
 			customTextTextInput.attr("class", "form-control customText__row__input customText__row__textInput");
 
 			var a = $('<a>');
@@ -53,12 +55,10 @@ jQuery(function($) {
 			}
 
 			obj.append(row);
-		    obj.find(".customText__row_"+currentIndex).find(".customText__row__customTextInput").mask('+7 (999) 999-99-99');
 			currentIndex++;
 		}
 
 		var init = function() {
-		    $.mask.definitions['~']='[+-]';
 			createRow({"title": "", "text": ""}, true);
 
 			for (i in options['customText']) {
@@ -89,9 +89,9 @@ jQuery(function($) {
 			var textInput = row.find(".customText__row__textInput");
 			data = {};
 			data['title'] = customTextInput.attr("value");
-			data['text'] = textInput.attr("value");
+			data['text'] = textInput.val();
 			customTextInput.attr("value", "");
-			textInput.attr("value", "");
+			textInput.val("");
 			createRow(data);
 		}
 

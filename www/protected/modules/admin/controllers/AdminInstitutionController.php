@@ -101,8 +101,8 @@ class AdminInstitutionController extends VAdminController
             'text'=>array(
                 'type'=> 'textarea',
             ),
-            'customText'=>array(
-                'type'=> 'textarea',
+            '_customText'=>array(
+                'type'=> 'EduCustomTextWidget',
             ),
             'status'=>array(
                 'type'=> 'dropdownlist',
