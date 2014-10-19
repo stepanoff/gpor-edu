@@ -84,15 +84,30 @@ class AdminInstitutionController extends VAdminController
     {
         return array(
             'title'=>array(
-                'type'=>'text',
+                'type'=> 'text',
+            ),
+            '_phones' => array(
+                'type' => 'EduPhonesWidget'
+            ),
+            '_emails' => array(
+                'type' => 'EduEmailsWidget'
+            ),
+            '_addresses' => array(
+                'type' => 'EduAddressesWidget'
             ),
             'announce'=>array(
-                'type'=>'textarea',
+                'type'=> 'textarea',
+            ),
+            'text'=>array(
+                'type'=> 'textarea',
+            ),
+            'customText'=>array(
+                'type'=> 'textarea',
             ),
             'status'=>array(
-                'type'=>'dropdownlist',
-                'items'=>Institution::statusTypes(),
-                'empty'=>'Выбрать',
+                'type'=> 'dropdownlist',
+                'items'=> Institution::statusTypes(),
+                'empty'=> 'Выбрать',
             ),
         );
     }

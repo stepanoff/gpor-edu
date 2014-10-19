@@ -46,6 +46,7 @@ $mainConfig = array(
         'ext.lightopenid.*',
 		'application.helpers.*',
 		'application.widgets.*',
+        'application.widgets.forms.*',
 
         // todo: имопрты модулей должны прописываться в самих модулях
         'application.modules.VAdmin.controllers.*',
