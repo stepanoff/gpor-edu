@@ -1,14 +1,81 @@
 <?php
 class SiteController extends Controller
 {
+    const ITEMS_BLOCK_1 = 6;
+    const ITEMS_BLOCK_2 = 6;
+
     public $layout='base';
 
     public function actionIndex()
     {
+        // весь список
+        $itemsArray = array();        
+        $limit = 100;
+        $offset = 0;
+        $criteria = new CDbCriteria(array(
+            'limit' => $limit,
+            'offset' => $offset*$limit,
+        ));
+        $items = Institution::model()->onSite()->orderDefault()->findAll($criteria);
+        while ($items) {
+            foreach ($items as $item) {
+                $itemsArray[] = array(
+                    'id' => $item->id,
+                    'title' => $item->title,
+                    'fullTitle' => $item->fullTitle,
+                );
+            }
+            $offset++;
+            $criteria = new CDbCriteria(array(
+                'limit' => $limit,
+                'offset' => $offset*$limit,
+            ));
+            $items = Institution::model()->onSite()->orderDefault()->findAll($criteria);
+        }
+
+
+        // первый блок с картинками
+        $criteria = new CDbCriteria(array(
+            'limit' => self::ITEMS_BLOCK_1,
+        ));
+        $itemsBlock1 = Institution::model()->onSite()->orderPriority()->findAll($criteria);
+
+        // второй блок с картинками
+        $criteria = new CDbCriteria(array(
+            'limit' => self::ITEMS_BLOCK_2,
+            'offset' => self::ITEMS_BLOCK_1
+        ));
+        $itemsBlock2 = Institution::model()->onSite()->orderPriority()->findAll($criteria);
+
+        // новости
+        $news = array();
+
         $this->setPageTitle(''.Yii::app()->params['siteName']);
         $this->render('main', array(
+            'list' => $itemsArray,
+            'itemsBlock1' => $itemsBlock1,
+            'itemsBlock2' => $itemsBlock2,
+            'news' => $news,
         ));
     }
+
+    public function actionshowCard()
+    {
+        $id = isset($_GET['id']) ? (int)$_GET['id'] : false;
+        if (!$id) {
+            throw new CHttpException(404, 'Страница не найдена');
+        }
+
+        $item = Institution::model()->findByPk($id);
+        if (!$item) {
+            throw new CHttpException(404, 'Страница не найдена');
+        }
+
+        $this->render('card', array(
+            'item' => $item,
+        ));
+    }
+
 
     public function actionLogin () {
         $ajax = Yii::app()->request->isAjaxRequest;

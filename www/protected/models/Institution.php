@@ -5,6 +5,12 @@ class Institution extends CActiveRecord
     const STATUS_HIDDEN = 40;
     const STATUS_VISIBLE = 50;
 
+    const PRIORITY_BASIC = 0;
+    const PRIORITY_HIGH = 10;
+    const PRIORITY_HIGHEST = 20;
+
+    const IMAGE_WIDTH_MAIN = 240;
+
     protected $__addresses = null;
     protected $__emails = null;
     protected $__phones = null;
@@ -20,12 +26,21 @@ class Institution extends CActiveRecord
         return 'institutions';
     }
 
-    public static function statusTypes ($source = false)
+    public static function statusTypes ()
     {
         return array (
-            self::STATUS_NEW => 'Новое',
+            //self::STATUS_NEW => 'Новое',
             self::STATUS_HIDDEN => 'Скрыто',
             self::STATUS_VISIBLE => 'На сайте',
+        );
+    }
+
+    public static function priorityTypes ()
+    {
+        return array (
+            self::PRIORITY_BASIC => 'Обычный',
+            self::PRIORITY_HIGH => 'Высокий',
+            self::PRIORITY_HIGHEST => 'Самый высокий',
         );
     }
 
@@ -36,6 +51,7 @@ class Institution extends CActiveRecord
             'fullTitle' => 'Полное название',
             'type' => 'Тип',
             'logo' => 'Логотип',
+            'image' => 'Изображение',
             'status' => 'Статус',
             'priority' => 'Приоритет',
             'emails' => 'Почтовые адреса',
@@ -55,7 +71,7 @@ class Institution extends CActiveRecord
     {
         return array(
             array('title', 'required'),
-            array('title, fullTitle, type, logo, status, clientSource, priority, emails, phones, addresses, announce, text, customText, _addresses, _emails, _phones, _customText', 'safe')
+            array('title, fullTitle, type, logo, image, status, priority, emails, phones, addresses, announce, text, customText, _addresses, _emails, _phones, _customText', 'safe')
         );
     }
 
@@ -169,6 +185,13 @@ class Institution extends CActiveRecord
         $this->__customText = $val;
     }
 
+    public function getFullTitle()
+    {
+        if ($this->fullTitle)
+            return $this->fullTitle;
+        return $this->title;
+    }
+
     public function scopes()
     {
         $alias = $this->getTableAlias();
@@ -206,7 +229,9 @@ class Institution extends CActiveRecord
     protected function beforeSave()
     {
         if (!$this->status)
-            $this->status = self::STATUS_NEW;
+            $this->status = self::STATUS_HIDDEN;
+        if (!$this->priority)
+            $this->priority = self::PRIORITY_BASIC;
 
         $this->addresses = CJSON::encode($this->get_addresses());
         $this->emails = CJSON::encode($this->get_emails());

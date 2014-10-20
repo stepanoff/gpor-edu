@@ -32,14 +32,6 @@ class AdminInstitutionController extends VAdminController
         );
     }
 
-    public static function typesList ()
-    {
-        return array(
-            '1' => 'Переданные в разработку',
-            '2' => 'Не переданные в разработку',
-        );
-    }
-
     public function appendLayoutFilters($model, $cFilterForm) {
         if ($cFilterForm->model->status != "") {
             $model->byStatus($cFilterForm->model->status);
@@ -86,6 +78,15 @@ class AdminInstitutionController extends VAdminController
             'title'=>array(
                 'type'=> 'text',
             ),
+            'fullTitle'=>array(
+                'type'=> 'text',
+            ),
+            'logo'=>array(
+                'type'=> 'text',
+            ),
+            'image'=>array(
+                'type'=> 'text',
+            ),
             '_phones' => array(
                 'type' => 'EduPhonesWidget'
             ),
@@ -99,7 +100,7 @@ class AdminInstitutionController extends VAdminController
                 'type'=> 'textarea',
             ),
             'text'=>array(
-                'type'=> 'textarea',
+                'type'=> 'VHtmlCkEditorWidget',
             ),
             '_customText'=>array(
                 'type'=> 'EduCustomTextWidget',
@@ -107,7 +108,12 @@ class AdminInstitutionController extends VAdminController
             'status'=>array(
                 'type'=> 'dropdownlist',
                 'items'=> Institution::statusTypes(),
-                'empty'=> 'Выбрать',
+//                'empty'=> 'Выбрать',
+            ),
+            'priority'=>array(
+                'type'=> 'dropdownlist',
+                'items'=> Institution::priorityTypes(),
+//                'empty'=> 'Выбрать',
             ),
         );
     }

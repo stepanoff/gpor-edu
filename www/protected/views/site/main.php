@@ -1,107 +1,19 @@
 <div class="g-48">
     <div class="g-col-1 g-span-27 g-main-col-1">
 
-        <h1 class="b-header b-header_type_h3">Лучшие вузы Екатеринбурга</h1>
+        <?php
+        $this->renderPartial('application.views.blocks.objectsOnMain', array(
+            'items' => $itemsBlock1,
+            'title' => 'Лучшие вузы Екатеринбурга',
+        ));
+        ?>
 
-        <!-- лента лого -->
-        <div class="g-48">
-            <div class="g-col-1 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="g-col-17 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="g-col-33 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-        <!-- лента лого -->
-
-        <!-- лента лого -->
-        <div class="g-48">
-            <div class="g-col-1 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="g-col-17 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="g-col-33 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-        <!-- лента лого -->
-
-
-        <h1 class="b-header b-header_type_h3">Лучшие колледжы Екатеринбурга</h1>
-
-        <!-- лента лого -->
-        <div class="g-48">
-            <div class="g-col-1 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="g-col-17 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="g-col-33 g-span-16">
-                <div style="background-image: url(http://s.66.ru/localStorage/news/48/f4/bb/1./48f4bb1_resizedScaled_300to130.jpg);" href="/news/society/164302/" class="b-news-item b-news-item_layout_annonce">
-                    <a href="/news/society/164302/" class="b-news-item__pic__shadow"></a>
-                    <span class="b-news-item__title">
-                        <a class="b-news-item__title__link" href="/news/society/164302/">Известные мамы Екатеринбурга устроили в Сети флешмоб в поддержку сериала #Роддом</a>&nbsp;<span class="nowrap"><a href="/news/society/164302/#comments" class="b-news-item__activity">(5)</a></span>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-        <!-- лента лого -->
-
+        <?php
+        $this->renderPartial('application.views.blocks.objectsOnMain', array(
+            'items' => $itemsBlock2,
+            'title' => 'Лучшие колледжы Екатеринбурга',
+        ));
+        ?>
 
 
         <h3 class="b-header b-header_type_h3">Последние новости</h3>
@@ -143,71 +55,30 @@
     <div class="g-col-29 g-span-20 g-main-col-2">
         <div class="g-48">
             <div class="g-col-1 g-span-24">
-
-
+                <?php
+                if ($list) {
+                    ?>
                 <h3 class="b-header b-header_type_h3">Вузы Екатеринбурга</h3>
                 <div style="background: #f4f4f4; padding: 20px;">
                     <ul>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
-                        <li><a href="#">Название Вуза</a></li>
+                    <?php
+                    foreach ($list as $item) {
+                        ?>
+                        <li><a href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item['id'])); ?>"><?php echo $item['title']; ?></a></li>
+                        <?php
+                    }
+                    ?>
                     </ul>
                 </div>
-
+                    <?php
+                }
+                ?>
             </div>
             <div class="g-col-26 g-span-24">
-                <div style="height: 400px; background: #00ff00;"></div>
+                <?php
+                $this->renderPartial('application.views.blocks.bannerRight', array(
+                ));
+                ?>
             </div>
         </div>
     </div>

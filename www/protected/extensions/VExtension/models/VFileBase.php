@@ -106,7 +106,7 @@ class VFileBase
 	{
         $filePath = Yii::app()->fileManager->getFilePath($fileName);
 
-		if (!file_exists($filePath))
+		if (!is_file($filePath))
 			return false;
 
 		if (empty($mimeType)) {

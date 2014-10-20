@@ -56,5 +56,11 @@ class VExtensionComponent extends CComponent {
         }
     }
 
+    public function registerGlyphicons () {
+        $cs = Yii::app()->clientScript;
+        $url = $this->getAssetsUrl();
+        $cs->registerCssFile($url.'/css/glyphicons.css');
+    }
+
 }
 ?>
