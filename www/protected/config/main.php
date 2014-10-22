@@ -41,9 +41,7 @@ $mainConfig = array(
         'application.models.forms.*',
 		'application.components.*',
 		'application.extensions.*',
-        'ext.eauth.services.*',
-        'ext.eoauth.*',
-        'ext.lightopenid.*',
+        'ext.yii-image-resizer.*',
 		'application.helpers.*',
 		'application.widgets.*',
         'application.widgets.forms.*',
@@ -134,7 +132,9 @@ $mainConfig = array(
             ),
         ),
         'urlManager'=>require(dirname(__FILE__).'/urlManager.php'),
-        
+        'resizeManager' => array(
+            'class' => 'application.extensions.yii-image-resizer.PImageResizer'
+        ),
         'cache' => array(
 			'class' => 'CFileCache'
 		),

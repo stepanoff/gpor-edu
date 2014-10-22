@@ -9,7 +9,6 @@ class VFileBase
 	private $_size;
 	private $_mimeType;
 	private $_extensionName;
-	private $_fileOriginalPath;
 	
 	private static $_types2Class = array(
 		'image/jpeg'        => 'VImageFile',
@@ -181,13 +180,12 @@ class VFileBase
 	 */
 	public function deleteFiles()
 	{
-		$fileDirs = array(substr($this->_fileRealPath, 0, strrpos($this->_fileRealPath, $this->_uid)), substr($this->_fileOriginalPath, 0, strrpos($this->_fileOriginalPath, $this->_uid)));
+		$fileDirs = array(substr($this->getFileRealPath(), 0, strrpos($this->getFileRealPath(), $this->getUid() )) );
 		foreach ($fileDirs as $fileDir) {
 			try {
-				if (!empty($fileDir))
-					ezcFile::removeRecursive($fileDir);
+				CFileHelper::removeDirectory($fileDir);
 			}
-			catch (ezcBaseFileException $e) {
+			catch (CHttpException $e) {
 				// do nothing if older file or dir is not present
 			}
 		}

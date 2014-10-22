@@ -18,6 +18,8 @@ class Institution extends CActiveRecord
 
     public $_logo;
     public $_logo_delete;
+    public $_image;
+    public $_image_delete;
 
     public static function model($className=__CLASS__)
     {
@@ -76,7 +78,7 @@ class Institution extends CActiveRecord
     {
         return array(
             array('title', 'required'),
-            array('title, fullTitle, type, logo, _logo, _logo_delete, image, status, priority, emails, phones, addresses, announce, text, customText, _addresses, _emails, _phones, _customText', 'safe')
+            array('title, fullTitle, type, logo, _logo, _logo_delete, image, _image, _image_delete, status, priority, emails, phones, addresses, announce, text, customText, _addresses, _emails, _phones, _customText', 'safe')
         );
     }
 
@@ -241,6 +243,16 @@ class Institution extends CActiveRecord
         if ($this->_logo || $this->_logo = CUploadedFile::getInstance($this, '_logo')) {
             $fileManager = Yii::app()->getComponent('fileManager');
             $this->logo = $fileManager->publishFile($this->_logo->getTempName(), $this->_logo->getExtensionName())->getUID();
+        }
+
+        if ($this->_image_delete) {
+            $fileManager = Yii::app()->getComponent('fileManager');
+            $fileManager->deleteFileByUid($this->image);
+            $this->image = '';
+        }
+        if ($this->_image || $this->_image = CUploadedFile::getInstance($this, '_image')) {
+            $fileManager = Yii::app()->getComponent('fileManager');
+            $this->image = $fileManager->publishFile($this->_image->getTempName(), $this->_image->getExtensionName())->getUID();
         }
 
         if (!$this->status)

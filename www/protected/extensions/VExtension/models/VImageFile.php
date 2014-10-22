@@ -14,33 +14,15 @@ class VImageFile extends VFileBase
 	 */
 	public function resize($newPath, $newWidth, $newHeight, $addWatermark = false)
 	{
-		$settings = new ezcImageConverterSettings(array(
-		    new ezcImageHandlerSettings( 'IM', 'ezcImageImagemagickHandler', array() )
-		));
-
-		$converter = new ezcImageConverter( $settings );
-
-        $filters = array(
-            new ezcImageFilter(
-                'scale',
-                array(
-                     'width' => (int)$newWidth,
-                     'height' => (int)$newHeight,
-                     'direction' => ezcImageGeometryFilters::SCALE_BOTH,
-                )
-            ),
-        );
+        $params = array('w' => $newWidth, 'h' => $newHeight, 'format' => $this->getExtensionName());
 
         try {
             $resizedFilePath = $newPath;
 
-            $converter->createTransformation( 'resizing', $filters, array( $this->getMimeType() ));
-            $converter->transform('resizing', $this->getFileRealPath(), $resizedFilePath);
+			Yii::app()->resizeManager->resize($this->getFileRealPath(), $resizedFilePath, $params);
 
-            @chmod($resizedFilePath, 0777);
-
-            if($addWatermark)
-                $this->addWatermark($resizedFilePath, $newWidth, $newHeight);
+            //TODO: if($addWatermark)
+            //    $this->addWatermark($resizedFilePath, $newWidth, $newHeight);
         }
         catch (Exception $e){
             $resizedFilePath = '';
@@ -62,12 +44,6 @@ class VImageFile extends VFileBase
 
 	public function crop($x, $y, $width, $height)
 	{
-		$settings = new ezcImageConverterSettings(array(
-		    new ezcImageHandlerSettings( 'IM', 'ezcImageImagemagickHandler', array() )
-		));
-
-		$converter = new ezcImageConverter( $settings );
-
         $filters = array(
             new ezcImageFilter(
                 'crop',
@@ -108,8 +84,17 @@ class VImageFile extends VFileBase
         return true;
 	}
 
-    public function getThumb ($width, $height, $type, $options = array())
+    public function getThumbUrl ($width, $height, $type = false, $options = array())
     {
+    	$thumb = $this->getThumb($width, $height, $type, $options);
+    	if ($thumb) {
+    		return $thumb->getUrl();
+    	}
+    }
+
+    public function getThumb ($width, $height, $type = false, $options = array())
+    {
+    	$type = $type === false ? VHtml::SCALE_WIDTH : $type;
         $defaultParams = array(
             'force'	=> true,
             'addWatermark'	=> false,
@@ -124,10 +109,12 @@ class VImageFile extends VFileBase
 		if (!file_exists($filePath))
 			return '';
 		$thumbName = $this->getThumbName ($width, $height, $type);
-		$thumbNameFull = Yii::app()->fileManager->getFilePath($thumbName);
 
+		$info = pathinfo($filePath);
+		$thumbNameFull = $info['dirname']. DS . $thumbName;
+		
 		if (file_exists($thumbNameFull) && !$params['create'])
-			return VFileBase::createInstance($thumbName);
+			return VFileBase::createInstance($thumbNameFull, $thumbName);
 
         $newWidth = false;
         $newHeight = false;
@@ -189,10 +176,10 @@ class VImageFile extends VFileBase
         if (!$newHeight || !$newWidth)
             return '';
 
-
         if ($this->resize($thumbNameFull, $newWidth, $newHeight, $params['addWatermark']))
         {
-            return VFileBase::createInstance($thumbName);
+
+            return VFileBase::createInstance($thumbNameFull, $thumbName);
 		}
         return '';
     }
@@ -212,9 +199,9 @@ class VImageFile extends VFileBase
         if ($type == VHtml::SCALE_SMALLER_SIDE)
             $postfix .= '_smaller';
 
-        $str = $this->getFileName();
+        $str = $this->getFileRealPath();
         $info = pathinfo($str);
-        return $info['dirname'].'/'.$info['filename'].$postfix.'.'.$info['extension'];
+        return $info['filename'].$postfix.'.'.$info['extension'];
     }
 
 	public function addWatermark($imageFilePath = false, $imageWidth = false, $imageHeight = false)
@@ -309,21 +296,6 @@ class VImageFile extends VFileBase
 	}
 
 	/**
-	 * @var ezcImageAnalyzer инстанс анализатора картинок
-	 */
-	private $_imageAnalyzer;
-
-	/** getter method */
-	private function getImageAnalyzer()
-	{
-		if (empty($this->_imageAnalyzer)) {
-			$file = $this->getFileRealPath();
-			$this->_imageAnalyzer = new ezcImageAnalyzer($file);
-		}
-		return $this->_imageAnalyzer;
-	}
-
-	/**
 	 * Получает высоту картинки
 	 * @return int
 	 */
@@ -362,9 +334,6 @@ class VImageFile extends VFileBase
 	{
 		$imageRealPath = $this->getFileRealPath();
 		system("convert $imageRealPath -auto-orient $imageRealPath");
-	}
-
-	public function deleteFiles() {
 	}
 
 }

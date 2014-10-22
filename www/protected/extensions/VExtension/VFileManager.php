@@ -54,6 +54,14 @@ class VFileManager extends CApplicationComponent {
         return $resultFile;
     }
 
+    public function deleteFileByUid ($uid)
+    {
+        $filePath = $this->getStoragePathByUid($uid);
+        $file = VFileBase::createInstance($filePath, $uid);
+        if ($file)
+            $file->delete();
+    }
+
     public function generateFileUid($filePath, $extensionName)
     {
         $resultUid = $this->hash($filePath);

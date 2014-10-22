@@ -21,7 +21,10 @@ class VHtmlPhotoWidget extends CWidget
 		$attr2 = '_'.$this->attribute.'_delete';
 		if (!empty($this->model->$attr))
 		{
-			echo '<div class="form-photo"><img src="'.FileUtils::urlByUid($this->model->$attr, 100).'"/></div>';
+			$file = Yii::app()->fileManager->getFile($this->model->$attr);
+			if ($file) {
+				echo '<div class="form-photo"><img src="'. $file->getThumbUrl(100, 100).'"/></div>';
+			}
 		}
 		echo '<div>';
 		echo CHtml::activeFileField($this->model, $attr1);

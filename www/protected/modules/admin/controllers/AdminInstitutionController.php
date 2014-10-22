@@ -81,11 +81,11 @@ class AdminInstitutionController extends VAdminController
             'fullTitle'=>array(
                 'type'=> 'text',
             ),
-            '_logo'=>array(
-                'type'=> 'file',
+            'logo'=>array(
+                'type'=> 'VHtmlPhotoWidget',
             ),
             'image'=>array(
-                'type'=> 'text',
+                'type'=> 'VHtmlPhotoWidget',
             ),
             '_phones' => array(
                 'type' => 'EduPhonesWidget'
