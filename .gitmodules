@@ -1,0 +1,4 @@
+[submodule "www/protected/extensions/yii-image-resizer"]
+	path = www/protected/extensions/yii-image-resizer
+	url = git@github.com:petun/yii-image-resizer.git
+ 

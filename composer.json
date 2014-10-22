@@ -8,7 +8,8 @@
     ],
     "require": {
         "yiisoft/yii": "*",
-        "twitter/bootstrap": "*"
+        "twitter/bootstrap": "*",
+        "petun/yii-image-resizer": "*"
     },
     "minimum-stability": "dev"
 }

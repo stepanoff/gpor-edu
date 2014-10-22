@@ -1,0 +1,311 @@
+.wysiwyg_content p {
+	margin-bottom:10px;
+}
+
+.wysiwyg_content a:link,
+.wysiwyg_content a:visited {
+	color: #555555;
+}
+
+.wysiwyg_content a:hover,
+.wysiwyg_content a:active {
+	color: #555555;
+}
+
+
+.wysiwyg_content h1>span,
+.wysiwyg_content h2>span,
+.wysiwyg_content h3>span,
+.wysiwyg_content h4>span,
+.wysiwyg_content h5>span,
+.wysiwyg_content h6>span,
+.wysiwyg_content b>span,
+.wysiwyg_content strong>span,
+.wysiwyg_content i>span,
+.wysiwyg_content em>span
+{
+       font: inherit;
+       margin: inherit;
+       padding: inherit;
+       outline: inherit;
+       text-decoration: inherit;
+}
+
+
+.wysiwyg_content img.main-foto {
+	float:left;
+	margin-right: 20px;
+	margin-bottom:10px;
+	margin-top:5px;
+}
+
+
+.wysiwyg_content h3 {
+	font:bold 14px/18px Arial, Tahoma, Sans-Serif ;
+	clear:both;
+	margin-bottom:3px;
+}
+
+.wysiwyg_content h2 {
+	font:normal 18px/20px Arial, Tahoma, Sans-Serif ;
+	margin-bottom:10px;
+}
+
+.wysiwyg_content p {
+	font: 14px/23px Arial, Tahoma, Sans-Serif;
+	margin:0px;
+	padding:0px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.wysiwyg_content ins {
+    display: block;
+    padding:0 20px;
+    text-decoration: none;
+    font: italic 14px/21px Arial Tahoma,Sans-Serif;
+}
+
+.wysiwyg_content p ins {
+	line-height: 21px;
+}
+
+.pic-with-cite {
+	clear:both;
+	overflow:hidden;
+	margin-bottom:20px;
+	margin-top:16px;
+}
+
+.pic-with-cite .pic-with-cite-header {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.pic-with-cite img {
+	float:left;
+}
+
+.pic-without-cite-header {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.b-print-version__wrap .wysiwyg_content blockquote,.news_single-view .wysiwyg_content blockquote {
+	font: italic 14px/21px Arial Tahoma, Sans-Serif;
+	margin-left:133px;
+	padding-left:30px;
+	margin-top:-5px;
+
+}
+.news_single-view .wysiwyg_content blockquote {
+    border:none;
+   	background:url(../img/wrap/blockquote.jpg) 0 0 no-repeat;
+}
+
+.wysiwyg_content blockquote p {
+	font:italic 14px/21px Arial Tahoma,Sans-Serif;
+	margin-bottom:10px;
+}
+
+
+.wysiwyg_content table {
+	margin-left: 0px;
+}
+
+
+.wysiwyg_content table caption {
+	vertical-align:bottom;
+	text-align:center;
+	color:#7f7f7f;
+	font:14px/18px Arial, Tahoma, Sans-Serif;
+	padding-top:4px;
+	padding-bottom:5px;
+	border-bottom:1px solid #cccccc;
+}
+
+.wysiwyg_content table caption a:link,
+.wysiwyg_content table caption a:visited {
+	color:#7f7f7f;
+}
+.wysiwyg_content table caption a:hover,
+.wysiwyg_content table caption a:active {
+	color:#7f7f7f;
+	text-decoration:none;
+}
+
+
+.wysiwyg_content table th,
+.wysiwyg_content table td {
+	padding:6px 10px;
+}
+
+.wysiwyg_content .YMaps-layer-container table th,
+.wysiwyg_content .YMaps-layer-container table td { padding: 0; }
+
+.wysiwyg_content table th {
+	padding-bottom:6px;
+	padding-top:4px;
+
+}
+
+
+.wysiwyg_content table th,
+.wysiwyg_content table th p,
+.news_single-view .wysiwyg_content table th p {
+	vertical-align:bottom;
+	background:#8a8f7e;
+	color:#fff;
+	font:11px/11px Arial, Tahoma, Sans-Serif;
+}
+
+
+.wysiwyg_content table th p {
+	margin:0px;
+	padding:0px;
+}
+
+
+.wysiwyg_content table td {
+	vertical-align:top;
+	background:#f1f5e8;
+	color:#000;
+	padding-top:10px;
+	padding-bottom:10px;
+	font:12px/14px Arial, Tahoma, Sans-Serif;
+}
+
+.wysiwyg_content table tr.odd td {
+	background:#fff;
+}
+
+.wysiwyg_content table.simple-picture,
+.wysiwyg_content table.positive-picture,
+.wysiwyg_content table.negative-picture,
+.wysiwyg_content table.positive_picture,
+.wysiwyg_content table.negative_picture {
+    clear: both;
+    float: none;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.wysiwyg_content table.simple-picture td p {
+	padding:0px;
+	margin:0px;
+	padding:0 0px;
+	margin-top:2px;
+}
+
+.wysiwyg_content table.simple-picture th,
+.wysiwyg_content table.positive-picture th,
+.wysiwyg_content table.negative-picture th,
+.wysiwyg_content table.positive_picture th,
+.wysiwyg_content table.negative_picture th {
+	background:none;
+	padding:0px;
+}
+
+.wysiwyg_content table.simple-picture td {
+	background: #F1F5E8;
+	padding: 15px 20px 17px;
+}
+
+.wysiwyg_content table.positive-picture td,
+.wysiwyg_content table.negative-picture td {
+	background: none repeat scroll 0 0 #F1F5E8;
+    color: #3E6D09;
+    padding-bottom: 20px;
+    padding-left: 90px;
+    padding-top: 20px;
+    vertical-align: middle;
+}
+
+.wysiwyg_content table.positive_picture td,
+.wysiwyg_content table.negative_picture td {
+	background: none repeat scroll 0 0 #F1F5E8;
+    color: #3E6D09;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-top: 20px;
+    vertical-align: middle;
+}
+
+.wysiwyg_content table.positive-picture td p,
+.wysiwyg_content table.negative-picture td p,
+.wysiwyg_content table.negative_picture td p,
+.wysiwyg_content table.positive_picture td p {
+	color:#3e6d09;
+	padding:0px;
+	margin:0px;
+	font-size:13px;
+	line-height:16px;
+	padding-bottom:16px;
+}
+
+.wysiwyg_content table.negative-picture td,
+.wysiwyg_content table.negative-picture td p,
+.wysiwyg_content table.negative_picture td,
+.wysiwyg_content table.negative_picture td p {
+	color:#9b1f05;
+}
+
+.wysiwyg_content table.negative-picture td p a:link,
+.wysiwyg_content table.negative-picture td p a:visited,
+.wysiwyg_content table.negative_picture td p a:link,
+.wysiwyg_content table.negative_picture td p a:visited {
+	color:#9b1f05;
+}
+
+.wysiwyg_content table.negative-picture td p a:hover,
+.wysiwyg_content table.negative-picture td p a:active,
+.wysiwyg_content table.negative_picture td p a:hover
+.wysiwyg_content table.negative_picture td p a:active {
+	color:#9b1f05;
+	text-decoration:none;
+}
+
+.wysiwyg_content table.positive-picture td p a:link,
+.wysiwyg_content table.positive-picture td p a:visited,
+.wysiwyg_content table.positive_picture td p a:link,
+.wysiwyg_content table.positive_picture td p a:visited {
+	color:#3E6D09;
+}
+
+.wysiwyg_content table.positive-picture td p a:hover,
+.wysiwyg_content table.positive-picture td p a:active,
+.wysiwyg_content table.positive_picture td p a:hover,
+.wysiwyg_content table.positive_picture td p a:active {
+	color:#3E6D09;
+	text-decoration:none;
+}
+
+
+.wysiwyg_content table.simple-picture th img,
+.wysiwyg_content table.negative-picture th img,
+.wysiwyg_content table.positive-picture th img,
+.wysiwyg_content table.positive_picture th img,
+.wysiwyg_content table.negative_picture th img {
+	width:100%;
+}
+
+.wysiwyg_content table.negative-picture td {
+	background:#f1f5e8 url(../img/icons/negative.jpg) no-repeat;
+}
+
+.wysiwyg_content table.positive-picture td {
+	background:#f1f5e8 url(../img/icons/positive.jpg) no-repeat;
+}
+
+.wysiwyg_content table.positive_picture td,
+.wysiwyg_content table.negative_picture td {
+	background:#f1f5e8;
+}
+
+.wysiwyg_content table td.table-picture-ico {
+	padding: 0px;
+	padding: 14px 8px 14px 18px;
+	width: 1%;
+}
+

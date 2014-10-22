@@ -81,8 +81,8 @@ class AdminInstitutionController extends VAdminController
             'fullTitle'=>array(
                 'type'=> 'text',
             ),
-            'logo'=>array(
-                'type'=> 'text',
+            '_logo'=>array(
+                'type'=> 'file',
             ),
             'image'=>array(
                 'type'=> 'text',

@@ -2,7 +2,9 @@
 class VFileBase
 {
 	private $_fileRealPath;
+	private $_fileUrl;
     private $_fileName;
+	private $_fileUid;
 
 	private $_size;
 	private $_mimeType;
@@ -79,11 +81,6 @@ class VFileBase
 		return true;
 	}
 
-    public function getSiteUrl ()
-    {
-        return Yii::app()->fileManager->getSiteUrl ($this->getFileName());
-    }
-
     public function getFileName ()
     {
         return $this->_fileName;
@@ -102,10 +99,8 @@ class VFileBase
 	 *
 	 * @return UserFileBase|null|false UserFileBase, если создал Instance, null - если файл ошибочный, false - внутреняя ошибка
 	 */
-	public static function createInstance($fileName, $checkFile=true)
+	public static function createInstance($filePath, $uid, $checkFile=true)
 	{
-        $filePath = Yii::app()->fileManager->getFilePath($fileName);
-
 		if (!is_file($filePath))
 			return false;
 
@@ -135,12 +130,19 @@ class VFileBase
 		$resultFile = null;
 		if (isset($targetClass))
 		{
+			$fileManager = Yii::app()->fileManager;
+			$basePath = $fileManager->getBasePath();
+			$baseUrl = $fileManager->getBaseUrl();
+			$fileUrl = str_replace($basePath, $baseUrl, $filePath);
+
 			$resultFile = new $targetClass();
 			$resultFile->setFileRealPath($filePath);
-            $resultFile->setFileName($fileName);
+			$resultFile->setUrl($fileUrl);
+            $resultFile->setFileName($uid);
 			$resultFile->setMimeType($mimeType);
 			$resultFile->setSize(filesize($filePath));
 			$resultFile->setExtensionName($ext);
+			$resultFile->setUid($uid);
 
 			if ($checkFile)
 			{
@@ -156,6 +158,22 @@ class VFileBase
 
 	public function getUrl()
 	{
+		return $this->_fileUrl;
+	}
+	
+	public function setUrl($val)
+	{
+		$this->_fileUrl = $val;
+	}
+	
+	public function getUid()
+	{
+		return $this->_fileUid;
+	}
+	
+	public function setUid($val)
+	{
+		$this->_fileUid = $val;
 	}
 	
 	/**

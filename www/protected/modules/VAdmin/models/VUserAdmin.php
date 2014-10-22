@@ -75,15 +75,15 @@ class UserAdmin extends CActiveRecord
 		
 		if ($this->_photo_delete)
 		{
-			$userFilesManager = Yii::app()->getComponent('userFilesManager');
-			$userFilesManager->deleteFileByUid($this->photo);
+			$fileManager = Yii::app()->getComponent('fileManager');
+			$fileManager->deleteFileByUid($this->photo);
 			$this->photo = '';
 		}
 
 		if ($this->_photo || $this->_photo = CUploadedFile::getInstance($this, '_photo'))
 		{
-			$userFilesManager = Yii::app()->getComponent('userFilesManager');
-			$this->photo = $userFilesManager->publishFile($this->_photo->getTempName(), $this->_photo->getExtensionName())->getUID();
+			$fileManager = Yii::app()->getComponent('fileManager');
+			$this->photo = $fileManager->publishFile($this->_photo->getTempName(), $this->_photo->getExtensionName())->getUID();
 		}
 		
 		return parent::beforeSave();
@@ -113,8 +113,8 @@ class UserAdmin extends CActiveRecord
     	
 		if ($this->photo)
 		{
-			$userFilesManager = Yii::app()->getComponent('userFilesManager');
-			$userFilesManager->deleteFileByUid($this->photo);
+			$fileManager = Yii::app()->getComponent('fileManager');
+			$fileManager->deleteFileByUid($this->photo);
 			$this->photo = '';
 		}
     	    	

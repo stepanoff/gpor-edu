@@ -61,6 +61,13 @@ class SiteController extends Controller
 
     public function actionshowCard()
     {
+        $model = new Institution;
+        $attr = 'logo';
+        var_dump(CUploadedFile::getInstance($model, $attr));
+        var_dump(CHtml::resolveName($model, $attr));
+        die();
+        die();
+
         $id = isset($_GET['id']) ? (int)$_GET['id'] : false;
         if (!$id) {
             throw new CHttpException(404, 'Страница не найдена');
