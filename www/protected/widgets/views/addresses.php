@@ -4,9 +4,7 @@
     $lat = $config['defaultLatitude'];
     $lng = $config['defaultLongitude'];
     $zoom = $config['defaultZoom'];
-
 ?>
-
 
 <div id="addresss_<?php echo $inputId; ?>"></div>
 

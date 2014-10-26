@@ -1,9 +1,6 @@
 <?php
 	Yii::app()->VExtension->registerGlyphicons();
-
-    $cs = Yii::app()->clientScript;
-    $url = Yii::app()->VExtension->getAssetsUrl();
-    $cs->registerCssFile($url . '/css/multiselect.css');
+    Yii::app()->VExtension->registerMaps();
 ?>
 <style>
 .edu-card {
@@ -95,6 +92,7 @@
     padding-left: 220px;
 }
 
+.map-obj {position: fixed; top: 10px; width: 800px; margin-left: -400px; left: 50%; background-color: #fff;}
 </style>
 <link rel="stylesheet" href="<?php echo Yii::app()->request->staticUrl; ?>css/card.css" media="all">
 
@@ -113,7 +111,13 @@
     				echo '<span class="edu-card__info__icon glyphicon glyphicon-map-marker" title="Адреса"></span>';
     				foreach ($item->_addresses as $address) {
     					echo '<p>';
-    					echo '<span class="edu-card__info__row__title"><a href="#">' . $address['address'] . '</a></span>';
+                        if (isset($address['lat']) && $address['lat'] && isset($address['lng']) && $address['lng']) {
+                            echo '<span class="edu-card__info__row__title">';
+                            echo '<a href="#" class="map-marker" data-lat="'. $address['lat'] .'" data-lng="'. $address['lng'] .'" data-zoom="'. $address['zoom'] .'">' . $address['address'] . '</a>';
+                            echo '</span>';
+                        } else {
+                            echo '<span class="edu-card__info__row__title">' . $address['address'] . '</span>';
+                        }
     					if ($address['text']) {
     						echo '<span class="edu-card__info__row__desc">' . $address['text'] . '</span>';
     					}
@@ -181,3 +185,76 @@
 		?>
     </div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var MapMarkers = function () {
+        var map = false;
+        var mapObj = false;
+        var placemark = false;
+
+        var initMap = function () {
+            var obj = $("<div>");
+            obj.attr("id", "mapObj");
+            obj.attr("class", "map-obj");
+            obj.html('<div id="ymap" style="width: 100%; height: 400px; z-index: 99999 !important;"></div><a href="#" class="btn btn-primary btn-close-map">Закрыть</a>');
+            $("body").append(obj);
+            mapObj = $("#mapObj");
+            mapObj.hide();
+            mapObj.find(".btn-close-map").click(function(){
+                mapObj.hide();
+                return false;
+            });
+
+            var defaultLatitude = $.data(document, 'yandexDefaultLatitude');
+            var defaultLongitude = $.data(document, 'yandexDefaultLongitude')
+            var defaultZoom = $.data(document, 'yandexDefaultZoom');
+
+            YMaps.ready(function() {
+                map = new YMaps.Map('ymap',
+                {
+                    center:[defaultLatitude, defaultLongitude],
+                    // Коэффициент масштабирования
+                    zoom:defaultZoom,
+                    // Тип карты
+                    type: "yandex#map",
+                    // Поведение карты
+                    behaviors:["default", "scrollZoom"]
+                });
+                map.controls
+                    .add('zoomControl')
+                    .add('typeSelector');
+            });
+        };
+
+        var showPlacemark = function(data) {
+            if (placemark) {
+                map.geoObjects.remove(placemark);
+            }
+            var myPlacemark = new YMaps.Placemark([data['lat'], data['lng']], {
+                hintContent: data['text']
+            });
+            map.geoObjects.add(myPlacemark);
+            map.setCenter([data['lat'], data['lng']], data['zoom'], {
+                checkZoomRange: true
+            });
+            placemark = myPlacemark;
+        }
+
+        initMap();
+        $(".map-marker").click(function(){
+            var data = {
+                'lat' : $(this).attr("data-lat"),
+                'lng' : $(this).attr("data-lng"),
+                'zoom' : $(this).attr("data-zoom"),
+                'text' : $(this).html()
+            };
+            showPlacemark(data);
+            mapObj.show();
+        });
+
+    };
+
+    var mapMarkers = new MapMarkers(); 
+});
+</script>
