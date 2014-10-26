@@ -52,24 +52,9 @@ class VHtml
         return $thumb->getSiteUrl();
     }
 
-    public static function thumbLink ($src, $sizes = false, $scaleMethod = false)
+    public static function thumbLink ($uid, $width, $height, $type = false, $options = array())
     {
-        $sizes = is_array($sizes) ? $sizes : array();
-        $w = isset($sizes[0]) && $sizes[0] ? $sizes[0] : false;
-        $h = isset($sizes[1]) && $sizes[1] ? $sizes[1] : false;
-        $scaleMethod = $scaleMethod !== false ? $scaleMethod : self::SCALE_EXACT;
-
-        $image = Yii::app()->fileManager->getImage($src);
-
-        if (!$image)
-            return '';
-
-        $thumb = $image->getThumb($w, $h, $scaleMethod);
-
-        if (!$thumb)
-            return '';
-
-        return $thumb->getSiteUrl();
+        return Yii::app()->fileManager->getImageThumbUrlByUid ($uid, $width, $height, $type, $options);
     }
 
 	public static function sumInterval ($min_entity, $max_entity = null, $currency = null, $format=array(

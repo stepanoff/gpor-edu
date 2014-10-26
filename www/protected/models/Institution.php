@@ -232,6 +232,38 @@ class Institution extends CActiveRecord
     }
     */
 
+    public function getParsedText()
+    {
+        $lines = explode(PHP_EOL, $this->text);
+        $res = array();
+        $title = '';
+        $text = '';
+        foreach ($lines as $line) {
+            preg_match_all('#<h2>(.*)</h2>(.*)#im', $line, $matches);
+            if ($matches && isset($matches[1]) && $matches[1]) {
+                if (!empty($text)) {
+                    $res[] = array(
+                        'title' => $title,
+                        'text' => $text,
+                    );
+                }
+                $title = $matches[1][0];
+                $text = !empty($matches[2][0]) ? $matches[2][0] : '';
+            }
+            else {
+                $text .= $line.PHP_EOL;
+            }
+        }
+
+        if (!empty($text)) {
+            $res[] = array(
+                'title' => $title,
+                'text' => $text,
+            );
+        }
+        return $res;
+    }
+
 
     protected function beforeSave()
     {

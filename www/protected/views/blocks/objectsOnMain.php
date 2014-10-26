@@ -14,7 +14,7 @@
                 }
                 ?>
             <div class="g-col-<?php echo (1+$c*16); ?> g-span-16">
-                <div style="background-image: url(<?php echo VHtml::thumbLink ($item->image, array(Institution::IMAGE_WIDTH_MAIN, false)); ?>);" class="b-news-item b-news-item_layout_annonce">
+                <div style="background-image: url(<?php echo Yii::app()->fileManager->getImageThumbUrlByUid ($item->image, Institution::IMAGE_WIDTH_MAIN, false); ?>);" class="b-news-item b-news-item_layout_annonce">
                     <a href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item->id)); ?>" class="b-news-item__pic__shadow"></a>
                     <span class="b-news-item__title">
                         <a class="b-news-item__title__link" href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item->id)); ?>"><?php echo $item->getFullTitle(); ?></a>

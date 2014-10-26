@@ -50,7 +50,7 @@ class SiteController extends Controller
         // новости
         $news = array();
 
-        $this->setPageTitle(''.Yii::app()->params['siteName']);
+        $this->setPageTitle('Университеты, колледжи и институты Екатеринбурга &mdash; '.Yii::app()->params['siteName']);
         $this->render('main', array(
             'list' => $itemsArray,
             'itemsBlock1' => $itemsBlock1,
@@ -71,6 +71,7 @@ class SiteController extends Controller
             throw new CHttpException(404, 'Страница не найдена');
         }
 
+        $this->setPageTitle($item->getFullTitle().'. Список документов для поступления, расписание, новости высшего учебного заведения в Екатеринбурге &mdash; '.Yii::app()->params['siteName']);
         $this->render('card', array(
             'item' => $item,
         ));

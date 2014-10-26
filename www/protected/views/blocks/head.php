@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" type="text/css" href="http://t.66.ru/external/fontawesome/css/font-awesome.css">
 	<script type="text/javascript" src="http://ptrck.ru/pt2.js"></script>
-	<title>Современный портал Екатеринбурга - 66.ru</title>
+	<title><?php echo $this->pageTitle; ?></title>
 
     <link type="text/css" rel="stylesheet" href="http://t.66.ru/external/fonts/PT_Sans_Narrow.css">
     <link href="http://t.66.ru/c31af5cf43126a2522242915871bebd371dd840c/bd4d7bc0a23ef0c60b69dff1b129f811/client.css" rel="stylesheet" type="text/css">

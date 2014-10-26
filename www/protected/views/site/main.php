@@ -1,3 +1,7 @@
+<style type="text/css">
+.edu-full-list {background: #f4f4f4; padding: 20px 20px 10px 20px;}
+.edu-full-list__item {margin-bottom: 10px;}
+</style>
 <div class="g-48">
     <div class="g-col-1 g-span-27 g-main-col-1">
 
@@ -58,13 +62,13 @@
                 <?php
                 if ($list) {
                     ?>
-                <h3 class="b-header b-header_type_h3">Вузы Екатеринбурга</h3>
-                <div style="background: #f4f4f4; padding: 20px;">
-                    <ul>
+                <h3 class="b-header b-header_type_h3">Все ВУЗы Екатеринбурга</h3>
+                <div class="edu-full-list">
+                    <ul class="edu-full-list__list">
                     <?php
                     foreach ($list as $item) {
                         ?>
-                        <li><a href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item['id'])); ?>"><?php echo $item['title']; ?></a></li>
+                        <li class="edu-full-list__item"><a href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item['id'])); ?>"><?php echo $item['title']; ?></a></li>
                         <?php
                     }
                     ?>

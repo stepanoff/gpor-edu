@@ -2,98 +2,6 @@
 	Yii::app()->VExtension->registerGlyphicons();
     Yii::app()->VExtension->registerMaps();
 ?>
-<style>
-.edu-card {
-	border-radius: 4px;
-	background: url() center center no-repeat;
-	position: relative;
-    margin-bottom: 20px;
-}
-.edu-card__heading {
-	height: 240px;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	background-color: rgba(256,256,256,0.6078431372549);
-	padding: 40px 0 0 210px;
-	position: relative;
-}
-.edu-card__info {
-	padding: 20px 20px 12px 210px;
-	background-color: #f7f7f9;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;	
-	position: relative;
-}
-.edu-card__logo {
-	position: absolute;
-	bottom: 50%;
-	left: 10px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	padding: 4px;
-	background-color: #fff;
-	width: 190px;
-	height: 190px;
-    text-align: center;
-}
-.edu-card__title {
-	position: absolute;
-	bottom: 10px;
-	_font-weight: bold;
-	font-size: 38px;
-	font-family: PT Sans Narrow,Arial,Helvetica,sans-serif;
-}
-
-.edu-card__info__row {
-	clear: both;
-	padding-left: 25px;
-	position: relative;
-}
-
-.edu-card__info__row p {
-	margin-bottom: 8px;
-	width: 33%;
-	float: left;
-}
-
-.edu-card__info__icon {
-	position: absolute;
-	font-size: 14px;
-	left: 0;
-	top: 6px;
-}
-
-.edu-card__info__row__title {
-	font-family: PT Sans Narrow,Arial,Helvetica,sans-serif;
-	font-size: 20px;
-	line-height: 23px;
-	margin-bottom: 4px;
-	display: block;
-}
-
-.edu-card__info__row__desc {
-	font-size: 12px;
-	line-height: 14px;
-	color: #595959;
-	display: block;
-}
-
-.edu-card-announce {
-    float: left;
-    width: 200px;
-    font-size: 12px;
-    line-height: 16px;
-    color: #595959;
-    padding: 0 10px;
-    border-right: 1px solid #dfdfdf;
-}
-
-.edu-card-text {
-    padding-left: 220px;
-}
-
-.map-obj {position: fixed; top: 10px; width: 800px; margin-left: -400px; left: 50%; background-color: #fff;}
-</style>
 <link rel="stylesheet" href="<?php echo Yii::app()->request->staticUrl; ?>css/card.css" media="all">
 
 <div class="g-48">
@@ -169,7 +77,23 @@
 
             <div class="edu-card-text">
                 <div class="wysiwyg_content">
-                    <?php echo $item->text; ?>
+                    <?php
+                    $res = $item->getParsedText();
+                    if ($res) {
+                        foreach ($res as $textBlock) {
+                            if ($textBlock['title']) {
+                                echo '<div class="edu-card-textBlock">';
+                                echo '<h2 class="edu-card-textBlock__title">' . $textBlock['title'] . '<span class="glyphicon glyphicon-collapse-down"></span></h2>';
+                            }
+                            if ($textBlock['text']) {
+                                echo '<div class="edu-card-textBlock__content">' . $textBlock['text'] . '</div>';
+                            }
+                            if ($textBlock['title']) {
+                                echo '</div>';
+                            }
+                        }
+                    }
+                    ?>
                 </div>
             </div>
             <div style="clear: both;"></div>
@@ -256,5 +180,21 @@ $(document).ready(function(){
     };
 
     var mapMarkers = new MapMarkers(); 
+
+    $(".edu-card-textBlock").delegate(".edu-card-textBlock__title", "click", function(){
+        var el = $(this).closest(".edu-card-textBlock").find(".edu-card-textBlock__content");
+        if ($(this).hasClass("edu-card-textBlock__title_open")) {
+            el.hide();
+            $(this).find("span").removeClass("glyphicon-collapse-up").addClass("glyphicon-collapse-down");
+            $(this).removeClass("edu-card-textBlock__title_open");
+        }
+        else {
+            el.show();
+            $(this).find("span").removeClass("glyphicon-collapse-down").addClass("glyphicon-collapse-up");
+            $(this).addClass("edu-card-textBlock__title_open");
+        }
+    });
+    $(".edu-card-textBlock").find(".edu-card-textBlock__content").hide();
+
 });
 </script>

@@ -102,9 +102,11 @@ class AdminInstitutionController extends VAdminController
             'text'=>array(
                 'type'=> 'VHtmlCkEditorWidget',
             ),
+            /*
             '_customText'=>array(
                 'type'=> 'EduCustomTextWidget',
             ),
+            */
             'status'=>array(
                 'type'=> 'dropdownlist',
                 'items'=> Institution::statusTypes(),
