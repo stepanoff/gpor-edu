@@ -83,7 +83,7 @@ class UserAdmin extends CActiveRecord
 		if ($this->_photo || $this->_photo = CUploadedFile::getInstance($this, '_photo'))
 		{
 			$fileManager = Yii::app()->getComponent('fileManager');
-			$this->photo = $fileManager->publishFile($this->_photo->getTempName(), $this->_photo->getExtensionName())->getUID();
+			$this->photo = $fileManager->publishFile($this->_photo->getTempName(), $this->_photo->getExtensionName())->getUid();
 		}
 		
 		return parent::beforeSave();

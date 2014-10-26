@@ -1,11 +1,16 @@
 <?php
 	Yii::app()->VExtension->registerGlyphicons();
+
+    $cs = Yii::app()->clientScript;
+    $url = Yii::app()->VExtension->getAssetsUrl();
+    $cs->registerCssFile($url . '/css/multiselect.css');
 ?>
 <style>
 .edu-card {
 	border-radius: 4px;
-	background: url(http://s.66.ru/localStorage/collection/b0/87/eb/c7/b087ebc7.jpg) center center no-repeat;
+	background: url() center center no-repeat;
 	position: relative;
+    margin-bottom: 20px;
 }
 .edu-card__heading {
 	height: 240px;
@@ -32,6 +37,7 @@
 	background-color: #fff;
 	width: 190px;
 	height: 190px;
+    text-align: center;
 }
 .edu-card__title {
 	position: absolute;
@@ -75,17 +81,32 @@
 	display: block;
 }
 
+.edu-card-announce {
+    float: left;
+    width: 200px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #595959;
+    padding: 0 10px;
+    border-right: 1px solid #dfdfdf;
+}
+
+.edu-card-text {
+    padding-left: 220px;
+}
+
 </style>
+<link rel="stylesheet" href="<?php echo Yii::app()->request->staticUrl; ?>css/card.css" media="all">
 
 <div class="g-48">
     <div class="g-col-1 g-span-37">
 
-    	<div class="edu-card" style="">
+    	<div class="edu-card" style="background-image: url(<?php echo Yii::app()->fileManager->getImageThumbUrlByUid($item->image, 960, false); ?>);">
     		<div class="edu-card__heading">
     			<h1 class="edu-card__title"><?php echo $item->getFullTitle(); ?></h1>
     		</div>
     		<div class="edu-card__info">
-	    		<div class="edu-card__logo"><img width="180" src="http://s.66.ru/localStorage/c5/3d/32/9c/c53d329c.jpg"></div>
+	    		<div class="edu-card__logo"><img width="" src="<?php echo Yii::app()->fileManager->getImageThumbUrlByUid($item->logo, 180, 180); ?>"></div>
     			<?php 
     			if ($item->_addresses) {
     				echo '<div class="edu-card__info__row edu-card__info__row_address">';
@@ -136,6 +157,19 @@
     			<div style="clear: both;"></div>
     		</div>
     	</div>
+
+        <div class="edu-card-texts">
+            <div class="edu-card-announce">
+                <?php echo nl2br($item->announce); ?>
+            </div>
+
+            <div class="edu-card-text">
+                <div class="wysiwyg_content">
+                    <?php echo $item->text; ?>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
 
 
     </div>

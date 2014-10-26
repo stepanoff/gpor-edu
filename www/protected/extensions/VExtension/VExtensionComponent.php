@@ -10,6 +10,11 @@ class VExtensionComponent extends CComponent {
     protected $assetsPath = '';
     protected $assetsUrl = '';
 
+    protected $mapsDefaultLatitude = '56.837982';
+    protected $mapsDefaultLongitude = '60.59734';
+    protected $mapsDefaultZoom = '12';
+    protected $mapsDefaultCity = 'Екатеринбург';
+
     public function init () {
         Yii::import($this->extensionAlias.'.*');
         Yii::import($this->extensionAlias.'.models.*');
@@ -62,5 +67,35 @@ class VExtensionComponent extends CComponent {
         $cs->registerCssFile($url.'/css/glyphicons.css');
     }
 
+    // todo: выложить в отдельный компонент
+    public function getMapsConfig () {
+        return array(
+            'defaultLatitude' => $this->mapsDefaultLatitude,
+            'defaultLongitude' => $this->mapsDefaultLongitude,
+            'defaultZoom' => $this->mapsDefaultZoom,
+            'defaultCity' => $this->mapsDefaultCity,
+        );
+    }
+
+    public function registerMaps () {
+        $cs = Yii::app()->clientScript;
+
+        $maps = array (
+            'defaultLatitude' => '',
+            'defaultLongitude' => '',
+            'defaultZoom' => '12',
+            'city' => 'Екатеринбург',
+        );
+        $url = 'http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU&ns=YMaps&mode=release';
+
+        $script = "
+            $.data(document, 'yandexDefaultLatitude', '". $this->mapsDefaultLatitude . "');
+            $.data(document, 'yandexDefaultLongitude', '". $this->mapsDefaultLongitude . "');
+            $.data(document, 'yandexDefaultZoom', '". $this->mapsDefaultZoom . "');
+            $.data(document, 'portal.city', '". $this->mapsDefaultCity . "');
+        ";
+        $cs->registerScriptFile($url, CClientScript::POS_HEAD);
+        $cs->registerScript('mapsData', $script, CClientScript::POS_END);
+    }
 }
 ?>

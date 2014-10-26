@@ -24,8 +24,19 @@ class VFileManager extends CApplicationComponent {
        return null;
     }
 
+    public function getImageThumbUrlByUid ($uid, $width, $height, $type = false, $options = array())
+    {
+        $file = $this->getFile($uid);
+        if (is_object($file) && get_class($file) == 'VImageFile') {
+            return $file->getThumbUrl($width, $height, $type, $options);
+        }
+        return null;
+    }
+
     public function getFile($uid)
     {
+        if (!$uid)
+            return null;
         $path = $this->getStoragePathByUid($uid);
         return VFileBase::createInstance($path, $uid);
     }

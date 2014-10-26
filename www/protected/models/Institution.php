@@ -242,7 +242,7 @@ class Institution extends CActiveRecord
         }
         if ($this->_logo || $this->_logo = CUploadedFile::getInstance($this, '_logo')) {
             $fileManager = Yii::app()->getComponent('fileManager');
-            $this->logo = $fileManager->publishFile($this->_logo->getTempName(), $this->_logo->getExtensionName())->getUID();
+            $this->logo = $fileManager->publishFile($this->_logo->getTempName(), $this->_logo->getExtensionName())->getUid();
         }
 
         if ($this->_image_delete) {
@@ -252,7 +252,7 @@ class Institution extends CActiveRecord
         }
         if ($this->_image || $this->_image = CUploadedFile::getInstance($this, '_image')) {
             $fileManager = Yii::app()->getComponent('fileManager');
-            $this->image = $fileManager->publishFile($this->_image->getTempName(), $this->_image->getExtensionName())->getUID();
+            $this->image = $fileManager->publishFile($this->_image->getTempName(), $this->_image->getExtensionName())->getUid();
         }
 
         if (!$this->status)
@@ -275,7 +275,27 @@ class Institution extends CActiveRecord
 
     protected function afterSave()
     {
+        $this->convertImages();
         return parent::afterSave();
+    }
+
+    protected function convertImages ()
+    {
+        if ($this->logo) {
+            $file = Yii::app()->fileManager->getFile($this->logo);
+            if ($file) {
+                $file->getThumb(100, 100);
+                $file->getThumb(180, 180);
+            }
+        }
+
+        if ($this->image) {
+            $file = Yii::app()->fileManager->getFile($this->image);
+            if ($file) {
+                $file->getThumb(100, 100);
+                $file->getThumb(965, false);
+            }
+        }
     }
 
 }

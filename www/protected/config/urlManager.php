@@ -25,7 +25,7 @@ return array(
         '/admin/<_c:([a-zA-Z0-9]+)>' => 'admin/<_c>/index',
         '/admin/<_c:([a-zA-Z0-9]+)>/edit' => 'admin/<_c>/edit',
 
-        '/<staticPage:([a-zA-Z0-9_]+)>'=>'staticPage/show',
+        //'/<staticPage:([a-zA-Z0-9_]+)>'=>'staticPage/show',
 
 	),
 );
