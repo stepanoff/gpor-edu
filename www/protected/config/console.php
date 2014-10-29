@@ -133,7 +133,6 @@ return array(
                 ),
             ),
             'modules' => array (
-
             ),
         ),
         'urlManager'=>require(dirname(__FILE__).'/urlManager.php'),
