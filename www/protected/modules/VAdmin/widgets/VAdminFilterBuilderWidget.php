@@ -22,7 +22,7 @@ class VAdminFilterBuilderWidget extends CWidget
         $this->registerAssets();
 
         echo CHtml::openTag('div', array('class' => 'navbar'));
-        echo CHtml::openTag('div', array('class' => 'navbar-inner', 'style' => 'padding-top: 60px;'));
+        echo CHtml::openTag('div', array('class' => 'navbar-inner'));
 
         $form->activeForm = array_merge($this->defaultOptions, $form->activeForm );
         $form->formInputLayout = '<div class="col-xs-6 col-md-3"><div class="form-group">{label}{input}{hint}<div class="form-row__error">{error}</div></div></div>';

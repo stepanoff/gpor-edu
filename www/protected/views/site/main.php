@@ -25,30 +25,17 @@
         <!-- Новости -->
         <div class="g-48">
             <div class="g-col-1 g-span-48">
+                <?php 
+                if ($news) {
+                    foreach ($news as $singleNews) {
+                        ?>
                 <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
+                    <?php echo $singleNews['titlelink']; ?>
                 </div>
-                <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
-                </div>
-                <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
-                </div>
-                <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
-                </div>
-                <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
-                </div>
-                <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
-                </div>
-                <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
-                </div>
-                <div class="b-news-item">
-                    «Все ждут продолжения рок-вечеринки…» Саша Гагарин уговаривает <a href="/news/freetime/164326/">экс-солиста «5’nizzа» взяться за «украинский флаг»</a>&nbsp;<span class="nowrap"><a class="b-news-item__activity " href="/news/freetime/164326/#comments">(2)</a></span>
-                </div>
+                        <?php
+                    }
+                }
+                ?>
             </div>
         </div>
         <!-- Новости -->

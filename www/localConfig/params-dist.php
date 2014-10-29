@@ -31,6 +31,8 @@ return array(
     'db_user' => '',
     'db_password' => '',
 
+    'gporApiUrl' => '',
+    'gporApiKey' => '',
 
     'twitter' => array(
         'key' => '',

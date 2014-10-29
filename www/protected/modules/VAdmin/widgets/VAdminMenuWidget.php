@@ -3,6 +3,7 @@ class VAdminMenuWidget extends CWidget {
 
     public $items = false;
     public $uri = false;
+    public $baseLink = false;
 
     public function run() {
 		parent::run();
@@ -10,6 +11,7 @@ class VAdminMenuWidget extends CWidget {
         $items = $this->items;
 
 		$this->render('menu', array(
+            'baseLink' => $this->baseLink,
             'items' => $items,
 		));
     }

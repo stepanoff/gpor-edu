@@ -12,7 +12,7 @@ class VAdminButtonWidget extends CGridColumn {
     /**
      * @var array the HTML options for the header cell tag.
      */
-    public $headerHtmlOptions=array('class'=>'button-column', 'width' => '1%');
+    public $headerHtmlOptions=array('class'=>'button-column', 'width' => '15%');
     /**
      * @var array the HTML options for the footer cell tag.
      */
@@ -101,19 +101,19 @@ class VAdminButtonWidget extends CGridColumn {
     public function defaultButtons () {
         return array(
             self::BUTTON_VIEW => array(
-                'icon' => 'icon-search',
+                'icon' => 'glyphicon glyphicon-search',
                 'label' => Yii::t('zii','View'),
-                'options' => array('class'=>'btn', 'action' => ''),
+                'options' => array('class'=>'btn btn-default btn-sm', 'action' => ''),
             ),
             self::BUTTON_EDIT => array(
-                'icon' => 'icon-pencil',
+                'icon' => 'glyphicon glyphicon-pencil',
                 'label' => Yii::t('zii','Update'),
-                'options' => array('class'=>'btn', 'action' => ''),
+                'options' => array('class'=>'btn btn-default btn-sm', 'action' => ''),
             ),
             self::BUTTON_DELETE => array(
-                'icon' => 'icon-remove icon-white',
+                'icon' => 'glyphicon glyphicon-remove',
                 'label' => Yii::t('zii','Delete'),
-                'options' => array('class'=>'btn btn-danger', 'actionType' => 'ajaxPage'),
+                'options' => array('class'=>'btn btn-danger btn-sm', 'actionType' => 'ajaxPage'),
             ),
         );
     }

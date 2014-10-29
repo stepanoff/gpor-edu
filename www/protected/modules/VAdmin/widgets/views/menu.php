@@ -1,14 +1,18 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="brand" href="./index.html"><?php echo Yii::app()->params['siteName']; ?></a>
-      <div class="nav-collapse collapse" style="height: 0px; ">
-        <ul class="nav">
+<div class="navbar navbar-inverse">
+  <div class="container">
+
+    <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo CHtml::normalizeUrl(array($baseLink)); ?>"><?php echo Yii::app()->params['siteName']; ?></a>
+    </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+        <ul class="nav navbar-nav">
             <?php
             foreach ($items as $item) {
                 ?>
@@ -20,6 +24,7 @@
             ?>
         </ul>
       </div>
-    </div>
+
   </div>
 </div>
+
