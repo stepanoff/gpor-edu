@@ -81,6 +81,10 @@ class AdminInstitutionController extends VAdminController
             'fullTitle'=>array(
                 'type'=> 'text',
             ),
+            'type'=>array(
+                'type'=> 'dropdownlist',
+                'items'=> Institution::typeTypes(),
+            ),
             'logo'=>array(
                 'type'=> 'VHtmlPhotoWidget',
             ),

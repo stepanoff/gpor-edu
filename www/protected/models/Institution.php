@@ -9,6 +9,10 @@ class Institution extends CActiveRecord
     const PRIORITY_HIGH = 10;
     const PRIORITY_HIGHEST = 20;
 
+    const TYPE_COLLEGE = 10;
+    const TYPE_VUZ = 20;
+    const TYPE_LINGVO = 30;
+
     const IMAGE_WIDTH_MAIN = 240;
 
     protected $__addresses = null;
@@ -49,6 +53,15 @@ class Institution extends CActiveRecord
         );
     }
 
+    public static function typeTypes ()
+    {
+        return array (
+            self::TYPE_COLLEGE => 'Колледжи, техникумы',
+            self::TYPE_VUZ => 'ВУЗы ',
+            self::TYPE_LINGVO => 'Языковые центры ',
+        );
+    }
+
     public function attributeLabels()
     {
         return array(
@@ -61,6 +74,7 @@ class Institution extends CActiveRecord
             '_image' => 'Изображение',
             'status' => 'Статус',
             'priority' => 'Приоритет',
+            'type' => 'Тип учебного заведения',
             'emails' => 'Почтовые адреса',
             '_emails' => 'Почтовые адреса',
             'phones' => 'Телефоны',
@@ -78,6 +92,7 @@ class Institution extends CActiveRecord
     {
         return array(
             array('title', 'required'),
+            array('type', 'required'),
             array('title, fullTitle, type, logo, _logo, _logo_delete, image, _image, _image_delete, status, priority, emails, phones, addresses, announce, text, customText, _addresses, _emails, _phones, _customText', 'safe')
         );
     }
