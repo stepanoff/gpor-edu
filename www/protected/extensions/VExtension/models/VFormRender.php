@@ -7,7 +7,7 @@
  */
 class VFormRender extends CForm
 {
-    public $formInputLayout = '<div class="form-group"><div class="control-label">{label}</div><div class="controls">{input}{hint}<div class="form-row__error">{error}</div></div></div>';
+    public $formInputLayout = '<div class="form-group"><div class="control-label">{label}</div><div class="text-muted">{hint}</div><div class="controls">{input}<div class="form-row__error">{error}</div></div></div>';
     public $buttonsLayout = '<div class="form-group"><div class="control-label"></div><div class="controls">{buttons}</div></div>';
     public $buttonLayout = '{button} ';
     public $formInputsLayout = '{elements}';
@@ -151,7 +151,7 @@ vapp.module.register( 'jsForm".$this->getUniqueId()."', js_steps_form, {
                 $output .= $elementOutput;
 
                 if(!empty($element->attributes['description']))
-                    $output .= '<div class="forms__hint">' . $element->attributes['description'].'</div>';
+                    $output .= '<div class="text-muted forms__hint">' . $element->attributes['description'].'</div>';
 
 
             }

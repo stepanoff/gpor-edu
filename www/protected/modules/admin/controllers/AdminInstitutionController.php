@@ -85,11 +85,16 @@ class AdminInstitutionController extends VAdminController
                 'type'=> 'dropdownlist',
                 'items'=> Institution::typeTypes(),
             ),
+            'site'=>array(
+                'type'=> 'text',
+            ),
             'logo'=>array(
                 'type'=> 'VHtmlPhotoWidget',
+                'hint'=> 'Желательно 180px и более по ширине или высоте'
             ),
             'image'=>array(
                 'type'=> 'VHtmlPhotoWidget',
+                'hint'=> '965px и более по ширине, горизонтальное фото'
             ),
             '_phones' => array(
                 'type' => 'EduPhonesWidget'
@@ -105,6 +110,7 @@ class AdminInstitutionController extends VAdminController
             ),
             'text'=>array(
                 'type'=> 'VHtmlCkEditorWidget',
+                'hint'=> 'Заголовок 2 становится закладкой, весь текст после него будет скрыт под закладку'
             ),
             /*
             '_customText'=>array(

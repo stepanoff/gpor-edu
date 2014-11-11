@@ -29,10 +29,10 @@ class VHtmlPhotoWidget extends CWidget
 		echo '<div>';
 		echo CHtml::activeFileField($this->model, $attr1);
 		echo '</div>';
-		echo '<div>';
-		echo CHtml::activeLabel($this->model, $attr2);
+		echo '<div class="checkbox" style="padding-left: 20px;"><label>';
 		echo CHtml::activeCheckbox($this->model, $attr2);
-		echo '</div>';
+		echo ' удалить';
+		echo '</label></div>';
 		
 	}
 	

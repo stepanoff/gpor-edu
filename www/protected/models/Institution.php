@@ -12,6 +12,7 @@ class Institution extends CActiveRecord
     const TYPE_COLLEGE = 10;
     const TYPE_VUZ = 20;
     const TYPE_LINGVO = 30;
+    const TYPE_BUSINESS = 40;
 
     const IMAGE_WIDTH_MAIN = 240;
 
@@ -59,6 +60,7 @@ class Institution extends CActiveRecord
             self::TYPE_COLLEGE => 'Колледжи, техникумы',
             self::TYPE_VUZ => 'ВУЗы ',
             self::TYPE_LINGVO => 'Языковые центры ',
+            self::TYPE_BUSINESS => 'Бизнес-образование ',
         );
     }
 
@@ -69,6 +71,7 @@ class Institution extends CActiveRecord
             'fullTitle' => 'Полное название',
             'type' => 'Тип',
             'logo' => 'Логотип',
+            'site' => 'Сайт',
             '_logo' => 'Логотип',
             'image' => 'Изображение',
             '_image' => 'Изображение',
@@ -93,7 +96,7 @@ class Institution extends CActiveRecord
         return array(
             array('title', 'required'),
             array('type', 'required'),
-            array('title, fullTitle, type, logo, _logo, _logo_delete, image, _image, _image_delete, status, priority, emails, phones, addresses, announce, text, customText, _addresses, _emails, _phones, _customText', 'safe')
+            array('title, fullTitle, type, logo, _logo, _logo_delete, site, image, _image, _image_delete, status, priority, emails, phones, addresses, announce, text, customText, _addresses, _emails, _phones, _customText', 'safe')
         );
     }
 
@@ -246,6 +249,17 @@ class Institution extends CActiveRecord
         return $this;
     }
     */
+
+    public function byType($type_id) {
+        $alias = $this->getTableAlias();
+        $this->getDbCriteria()->mergeWith(
+            array (
+                'condition' => $alias.'.type = :type_id',
+                'params' => array(':type_id' => $type_id),
+            )
+        );
+        return $this;
+    }
 
     public function getParsedText()
     {

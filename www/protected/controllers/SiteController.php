@@ -8,44 +8,50 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        $types = array(
+            Institution::TYPE_VUZ => array ('title' => 'Лучшие ВУЗы Екатеринбурга', 'listTitle' => 'Все ВУЗы Екатеринбурга', 'limit' => 6),
+            Institution::TYPE_COLLEGE => array ('title' => 'Лучшие колледжи и техникумы Екатеринбурга', 'listTitle' => 'Все колледжи Екатеринбурга', 'limit' => 6),
+            Institution::TYPE_LINGVO => array ('title' => 'Лучшие языковые центры Екатеринбурга', 'listTitle' => 'Все языковые центры Екатеринбурга', 'limit' => 6),
+            Institution::TYPE_BUSINESS => array ('title' => 'Лучшее бизнес-образование Екатеринбурга', 'listTitle' => 'Бизнес образование в Екатеринбурге', 'limit' => 6),
+        );
+
         // весь список
         $itemsArray = array();        
-        $limit = 100;
-        $offset = 0;
-        $criteria = new CDbCriteria(array(
-            'limit' => $limit,
-            'offset' => $offset*$limit,
-        ));
-        $items = Institution::model()->onSite()->orderDefault()->findAll($criteria);
-        while ($items) {
-            foreach ($items as $item) {
-                $itemsArray[] = array(
-                    'id' => $item->id,
-                    'title' => $item->title,
-                    'fullTitle' => $item->fullTitle,
-                );
-            }
-            $offset++;
+
+        foreach ($types as $key => $value) {
+            $limit = 100;
+            $offset = 0;
             $criteria = new CDbCriteria(array(
                 'limit' => $limit,
                 'offset' => $offset*$limit,
             ));
-            $items = Institution::model()->onSite()->orderDefault()->findAll($criteria);
+            $items = Institution::model()->onSite()->byType($key)->orderDefault()->findAll($criteria);
+            while ($items) {
+                foreach ($items as $item) {
+                    $itemsArray[$key][] = array(
+                        'id' => $item->id,
+                        'title' => $item->title,
+                        'fullTitle' => $item->fullTitle,
+                    );
+                }
+                $offset++;
+                $criteria = new CDbCriteria(array(
+                    'limit' => $limit,
+                    'offset' => $offset*$limit,
+                ));
+                $items = Institution::model()->onSite()->orderDefault()->findAll($criteria);
+            }
         }
 
+        $imgBlocks = array();
 
-        // первый блок с картинками
-        $criteria = new CDbCriteria(array(
-            'limit' => self::ITEMS_BLOCK_1,
-        ));
-        $itemsBlock1 = Institution::model()->onSite()->orderPriority()->findAll($criteria);
-
-        // второй блок с картинками
-        $criteria = new CDbCriteria(array(
-            'limit' => self::ITEMS_BLOCK_2,
-            'offset' => self::ITEMS_BLOCK_1
-        ));
-        $itemsBlock2 = Institution::model()->onSite()->orderPriority()->findAll($criteria);
+        foreach ($types as $key => $value) {
+            $model = new Institution;            
+            $criteria = new CDbCriteria(array(
+                'limit' => $value['limit'],
+            ));
+            $imgBlocks[$key] = Institution::model()->onSite()->byType($key)->orderPriority()->findAll($criteria);
+        }
 
         // новости
         $news = Yii::app()->cache->get('mainNews');
@@ -53,8 +59,8 @@ class SiteController extends Controller
         $this->setPageTitle('Университеты, колледжи и институты Екатеринбурга &mdash; '.Yii::app()->params['siteName']);
         $this->render('main', array(
             'list' => $itemsArray,
-            'itemsBlock1' => $itemsBlock1,
-            'itemsBlock2' => $itemsBlock2,
+            'imgBlocks' => $imgBlocks,
+            'types' => $types,
             'news' => $news,
         ));
     }

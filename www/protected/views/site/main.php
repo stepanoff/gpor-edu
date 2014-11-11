@@ -6,19 +6,13 @@
     <div class="g-col-1 g-span-27 g-main-col-1">
 
         <?php
-        $this->renderPartial('application.views.blocks.objectsOnMain', array(
-            'items' => $itemsBlock1,
-            'title' => 'Лучшие вузы Екатеринбурга',
-        ));
+        foreach ($imgBlocks as $key => $value) {
+            $this->renderPartial('application.views.blocks.objectsOnMain', array(
+                'items' => $value,
+                'title' => $types[$key]['title'],
+            ));
+        }
         ?>
-
-        <?php
-        $this->renderPartial('application.views.blocks.objectsOnMain', array(
-            'items' => $itemsBlock2,
-            'title' => 'Лучшие колледжы Екатеринбурга',
-        ));
-        ?>
-
 
         <h3 class="b-header b-header_type_h3">Последние новости</h3>
 
@@ -48,12 +42,13 @@
             <div class="g-col-1 g-span-24">
                 <?php
                 if ($list) {
+                    foreach ($list as $key => $value) {
                     ?>
-                <h3 class="b-header b-header_type_h3">Все ВУЗы Екатеринбурга</h3>
+                <h3 class="b-header b-header_type_h3"><?php echo $types[$key]['listTitle']; ?></h3>
                 <div class="edu-full-list">
                     <ul class="edu-full-list__list">
                     <?php
-                    foreach ($list as $item) {
+                    foreach ($value as $item) {
                         ?>
                         <li class="edu-full-list__item"><a href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item['id'])); ?>"><?php echo $item['title']; ?></a></li>
                         <?php
@@ -62,6 +57,7 @@
                     </ul>
                 </div>
                     <?php
+                    }
                 }
                 ?>
             </div>
