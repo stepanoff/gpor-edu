@@ -7,14 +7,14 @@
             $i = 0;
             $c = 0;
             foreach ($items as $item) {
-                if (!$i || !$i%3) {
+                if (!$c) {
                     ?>
                     <div class="g-48">
                     <?php
                 }
                 ?>
             <div class="g-col-<?php echo (1+$c*16); ?> g-span-16">
-                <div style="background-image: url(<?php echo Yii::app()->fileManager->getImageThumbUrlByUid ($item->image, Institution::IMAGE_WIDTH_MAIN, false); ?>);" class="b-news-item b-news-item_layout_annonce">
+                <div style="background-image: url(<?php echo Yii::app()->fileManager->getImageThumbUrlByUid ($item->image, Institution::IMAGE_WIDTH_MAIN, 130, VHtml::SCALE_SMALLER_SIDE); ?>);" class="b-news-item b-news-item_layout_annonce">
                     <a href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item->id)); ?>" class="b-news-item__pic__shadow"></a>
                     <span class="b-news-item__title">
                         <a class="b-news-item__title__link" href="<?php echo CHtml::normalizeUrl(array('/site/showCard', 'id'=>$item->id)); ?>"><?php echo $item->getFullTitle(); ?></a>
@@ -24,7 +24,7 @@
                 <?php
                 $c++;
                 $i++;
-                if (!$i%3) {
+                if ($c>2) {
                     $c = 0;
                     ?>
                     </div>
@@ -32,7 +32,7 @@
                 }
             }
 
-            if ($i%3) {
+            if ($c) {
                 ?>
                 </div>
                 <?php

@@ -1,8 +1,8 @@
 .edu-card {
 	border-radius: 4px;
-	background: url() center center no-repeat;
-	position: relative;
     margin-bottom: 20px;
+	position: relative;
+	background: url() top center no-repeat;
 }
 .edu-card__heading {
 	height: 240px;
@@ -31,6 +31,11 @@
 	height: 190px;
     text-align: center;
 }
+.edu-card__logo img {
+	padding-top: 50%;
+	margin-top: -20px;
+}
+
 .edu-card__title {
 	position: absolute;
 	bottom: 10px;

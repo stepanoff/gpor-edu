@@ -12,7 +12,24 @@
     			<h1 class="edu-card__title"><?php echo $item->getFullTitle(); ?></h1>
     		</div>
     		<div class="edu-card__info">
-	    		<div class="edu-card__logo"><img width="" src="<?php echo Yii::app()->fileManager->getImageThumbUrlByUid($item->logo, 180, 180); ?>"></div>
+                <?php
+                if ($item->logo) {
+                    $logo = Yii::app()->fileManager->getImage($item->logo);
+                    if ($logo) {
+                        $logoThumb = $logo->getThumb (180, 180);
+                        $logoHeight = $logoThumb->getHeight();
+                    ?>
+                <div class="edu-card__logo"><img style="margin-top: -<?php echo ceil($logoHeight/2); ?>px;" width="" src="<?php echo $logo->getThumbUrl(180, 180); ?>" alt="<?php echo CHtml::encode($item->getFullTitle()); ?>"></div>
+                    <?php
+                    }
+                }
+                else  {
+                    ?>
+                <div class="edu-card__logo"></div>
+                    <?php
+                }
+                ?>
+
     			<?php 
     			if ($item->_addresses) {
     				echo '<div class="edu-card__info__row edu-card__info__row_address">';

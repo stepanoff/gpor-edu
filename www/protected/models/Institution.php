@@ -355,6 +355,7 @@ class Institution extends CActiveRecord
             if ($file) {
                 $file->getThumb(100, 100);
                 $file->getThumb(965, false);
+                $file->getThumb(self::IMAGE_WIDTH_MAIN, 130, VHtml::SCALE_SMALLER_SIDE);
             }
         }
     }
