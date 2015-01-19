@@ -121,6 +121,21 @@
 	margin-bottom:10px;
 }
 
+.wysiwyg_content img {
+	width: 100%;
+}
+
+.wysiwyg_content a {
+	color: #007899;
+	border-bottom: 1px solid rgba(0,120,153,0.3);
+	text-decoration: none;
+}
+
+.wysiwyg_content a:hover {
+	color: #ff5400;
+	border-color: rgba(255, 84, 0, 0.30000000000000004);
+}
+
 .wysiwyg_content a:visited {
 	color: #555555;
 }

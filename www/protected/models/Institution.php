@@ -13,6 +13,7 @@ class Institution extends CActiveRecord
     const TYPE_VUZ = 20;
     const TYPE_LINGVO = 30;
     const TYPE_BUSINESS = 40;
+    const TYPE_ADDITIONAL = 50;
 
     const IMAGE_WIDTH_MAIN = 240;
 
@@ -60,7 +61,8 @@ class Institution extends CActiveRecord
             self::TYPE_COLLEGE => 'Колледжи, техникумы',
             self::TYPE_VUZ => 'ВУЗы ',
             self::TYPE_LINGVO => 'Языковые центры ',
-            self::TYPE_BUSINESS => 'Бизнес-образование ',
+            self::TYPE_BUSINESS => 'Бизнес-образование',
+            self::TYPE_ADDITIONAL => 'Дополнительное образование',
         );
     }
 
@@ -255,6 +257,17 @@ class Institution extends CActiveRecord
         $this->getDbCriteria()->mergeWith(
             array (
                 'condition' => $alias.'.type = :type_id',
+                'params' => array(':type_id' => $type_id),
+            )
+        );
+        return $this;
+    }
+
+    public function byStatus($type_id) {
+        $alias = $this->getTableAlias();
+        $this->getDbCriteria()->mergeWith(
+            array (
+                'condition' => $alias.'.status = :type_id',
                 'params' => array(':type_id' => $type_id),
             )
         );

@@ -13,6 +13,7 @@ class SiteController extends Controller
             Institution::TYPE_COLLEGE => array ('title' => 'Лучшие колледжи и техникумы Екатеринбурга', 'listTitle' => 'Все колледжи Екатеринбурга', 'limit' => 6),
             Institution::TYPE_LINGVO => array ('title' => 'Лучшие языковые центры Екатеринбурга', 'listTitle' => 'Все языковые центры Екатеринбурга', 'limit' => 6),
             Institution::TYPE_BUSINESS => array ('title' => 'Лучшее бизнес-образование Екатеринбурга', 'listTitle' => 'Бизнес образование в Екатеринбурге', 'limit' => 6),
+            Institution::TYPE_ADDITIONAL => array ('title' => 'Лучшее дополнительное образование Екатеринбурга', 'listTitle' => 'Дополнительное образование в Екатеринбурге', 'limit' => 6),
         );
 
         // весь список

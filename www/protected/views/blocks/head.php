@@ -21,11 +21,12 @@
 
     <link rel="stylesheet" type="text/css" href="http://t.66.ru/external/fontawesome/css/font-awesome.css">
 	<script type="text/javascript" src="http://ptrck.ru/pt2.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://t.66.ru/external/fonts/PT_Sans_Narrow.css">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->staticUrl; ?>css/client.css" media="all">
+    <script src="<?php echo Yii::app()->request->staticUrl; ?>js/client.js" type="text/javascript"></script>
+
 	<title><?php echo $this->pageTitle; ?></title>
 
-    <link type="text/css" rel="stylesheet" href="http://t.66.ru/external/fonts/PT_Sans_Narrow.css">
-    <link href="http://t.66.ru/c31af5cf43126a2522242915871bebd371dd840c/bd4d7bc0a23ef0c60b69dff1b129f811/client.css" rel="stylesheet" type="text/css">
-	<script src="http://t.66.ru/c31af5cf43126a2522242915871bebd371dd840c/bd4d7bc0a23ef0c60b69dff1b129f811/client.js" type="text/javascript"></script>
 </head>
 
 <body class="i-branding">
@@ -56,5 +57,10 @@
         <div class="_l-width">
                     </div>
     </div>
+
+        <?php
+            $this->renderPartial('application.views.blocks.bannerTop', array(
+            ));
+        ?>
 
     <div class="l-header-wrap">

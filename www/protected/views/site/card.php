@@ -30,6 +30,14 @@
                 }
                 ?>
 
+                <?php 
+                if ($item->site) {
+                    echo '<div class="edu-card__info__row edu-card__info__row_site">';
+                    echo '<p><a href="http://66.ru/go/' . str_replace('http://', '', $item->site) . '"><span class="edu-card__info__row__title">' . $item->site . '</span></a></p>';
+                    echo '</div>';
+                }
+                ?>
+
     			<?php 
     			if ($item->_addresses) {
     				echo '<div class="edu-card__info__row edu-card__info__row_address">';
@@ -83,6 +91,7 @@
     				echo '</div>';
     			}
     			?>
+
     			<div style="clear: both;"></div>
     		</div>
     	</div>

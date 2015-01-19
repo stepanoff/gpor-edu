@@ -22,8 +22,8 @@ class VHtmlCkEditorWidget extends CWidget
             array(
                 'Bold', 'Italic', 'Strike', 'Format', '-',
                 'Undo', 'Redo', 'Image', '-',
-                'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'BulletedList', 'NumberedList', '-',
-                'Blockquote', 'Link', 'Unlink', 'Templates', 'Source',
+                'Align', 'BulletedList', 'NumberedList', '-',
+                'Blockquote', 'Link', 'Unlink', 'Templates', 'Source'
 //                'Blockquote', 'Link', 'Unlink', 'Linkpopup', 'Templates', 'Maximize', 'Typograf', 'Source',
             )
         ),
