@@ -43,8 +43,17 @@
                 <?php
                 if ($list) {
                     foreach ($list as $key => $value) {
-                    ?>
+                        if ($itemsTotal[$key] > count($value)) {
+                            ?>
+                <h3 class="b-header b-header_type_h3"><?php echo CHtml::link($types[$key]['listTitle'], array('/site/type', 'type'=>$types[$key]['alias']), array('class'=>'')); ?></h3>
+                            <?php
+                        }
+                        else {
+                            ?>
                 <h3 class="b-header b-header_type_h3"><?php echo $types[$key]['listTitle']; ?></h3>
+                <?php
+                        }
+                    ?>
                 <div class="edu-full-list">
                     <ul class="edu-full-list__list">
                     <?php
@@ -54,6 +63,7 @@
                         <?php
                     }
                     ?>
+                        <li class="edu-full-list__item"><?php echo CHtml::link('Весь список &rarr;', array('/site/type', 'type'=>$types[$key]['alias']), array('class'=>'')); ?></li>
                     </ul>
                 </div>
                     <?php

@@ -7,7 +7,7 @@
     <div class="l-width">
         <div class="g-48">
             <div class="g-col-1 g-span-28 js-main-col">
-                <a class="b-header-logo" href="/"><img class="b-header-logo__img" src="http://s.66.ru/localStorage/e3/57/b6/4f/e357b64f.png"></a>
+                <a class="b-header-logo" href="http://66.ru"><img class="b-header-logo__img" src="http://s.66.ru/localStorage/e3/57/b6/4f/e357b64f.png"></a>
 
                 <?php
 				$this->renderPartial('application.views.blocks.menu', array(
@@ -57,6 +57,10 @@
 
 	<div class="l-body-wrap">
 		<div class="l-width">
+            <?php
+                $this->renderPartial('application.views.blocks.submenu', array(
+                ));
+            ?>
 
 			<?php echo $content; ?>
 	            

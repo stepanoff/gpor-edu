@@ -42,17 +42,17 @@
                 </li>
             </ul>
             <div class="grid__module grid__module_col_38 grid__module_span_90">
-    <a href="/news/business/166384/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/14/8e/8f/e1/148e8fe1_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Люди-гвозди. Как владельцы маленькой швейной фабрики выгнали китайцев из детсадов</span>
+    <a href="/news/internet/168545/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/5f/59/58/76/5f595876_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Из-за одного ролика Роскомнадзор ограничил доступ к YouTube по всей России  <span class="case__comments">(13)</span></span>
     </a>
-    <a href="/auto/news/166381/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/78/ea/9c/cb/78ea9ccb_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Спасительный утиль: продажи автомобилей в Екатеринбурге ожили  <span class="case__comments">(10)</span></span>
+    <a href="/auto/news/168542/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/76/b1/f8/73/76b1f873_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Хоть западайся: почему бензин не подешевеет вслед за нефтью  <span class="case__comments">(28)</span></span>
     </a>
-    <a href="/news/entertainment/166338/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/8f/7c/de/47/8f7cde47_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Два активиста убедили Общественную палату, что в Екатеринбурге обосновалась «пятая колонна»  <span class="case__comments">(67)</span></span>
+    <a href="/news/business/168495/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/e1/8b/67/c4/e18b67c4_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Дмитрий Попов, новый глава КРСУ: «Заниматор» создал я — это суперполезный опыт»  <span class="case__comments">(20)</span></span>
     </a>
-    <a href="/news/business/166337/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/6f/7f/32/ea/6f7f32ea_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Оптимисты: свердловский минсельхоз ждет обвального падения цен на гречку  <span class="case__comments">(20)</span></span>
+    <a href="/news/society/168541/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/c3/b5/97/b3/c3b597b3_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Реальные доходы россиян упали впервые за 15 лет  <span class="case__comments">(22)</span></span>
     </a>
 
             </div>
@@ -201,22 +201,22 @@
     <table class="b-submenu-item__courses__table">
         <tbody><tr>
             <td class="b-submenu-item__courses__table__cell-1">
-                Курс валют ЦБРФ<br><ins class="b-submenu-item__courses__important">на сегодня, 28.11.14</ins>
+                Курс валют ЦБРФ<br><ins class="b-submenu-item__courses__important">на сегодня, 29.01.15</ins>
             </td>
             <td class="b-submenu-item__courses__table__cell-2">
                 <table class="b-bank-item-miniCard__courses__table">
                     <tbody><tr>
                         <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_first"><ins class="b-bank-item-miniCard__courses__label">$</ins></td>
-                        <td class="b-bank-item-miniCard__courses__table__body">47.6629</td>
+                        <td class="b-bank-item-miniCard__courses__table__body">67.150597</td>
                         <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_last">
-                                                        <div class="b-bank-item-miniCard__courses__dynamic b-bank-item-miniCard__courses__dynamic_up">1.2385</div>
+                                                        <div class="b-bank-item-miniCard__courses__dynamic b-bank-item-miniCard__courses__dynamic_down">-0.6647</div>
                         </td>
                     </tr>
                     <tr>
                         <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_first"><ins class="b-bank-item-miniCard__courses__label">€</ins></td>
-                        <td class="b-bank-item-miniCard__courses__table__body">59.6215</td>
+                        <td class="b-bank-item-miniCard__courses__table__body">76.262901</td>
                         <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_last">
-                                                        <div class="b-bank-item-miniCard__courses__dynamic b-bank-item-miniCard__courses__dynamic_up">1.7163</div>
+                                                        <div class="b-bank-item-miniCard__courses__dynamic b-bank-item-miniCard__courses__dynamic_down">-0.0293</div>
                         </td>
                     </tr>
                 </tbody></table>                                                                    
@@ -283,7 +283,8 @@
   <a href="http://66.ru/doska/" class="main-menu__link">
   Объявления</a>
 <div class="main-menu__sub main-menu__sub_width_global submenu" style="width: 1585px; left: -268.34375px;">
-  <div class="l-width"><div class="g-48 b-header-menu__item__sub__wrap" id="b-header-menu__item__sub__wrap_10" style="padding-top: 0; padding-bottom: 0;"><div class="g-col-2 g-span-9 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
+  <div class="l-width"><div class="g-48 b-header-menu__item__sub__wrap" id="b-header-menu__item__sub__wrap_10" style="padding-top: 0; padding-bottom: 0;">
+<div class="g-col-2 g-span-9 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
   <ul class="b-header-menu__item__sub__wrap__col__list">
     <li class="b-header-menu__item__sub__wrap__col__list__item">
       <a class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l" href="http://66.ru/doska/">Доска объявлений</a>
@@ -296,111 +297,39 @@
     <a class="b-submenu-item__bank-zajavka__btn" href="http://66.ru/doska/add-adv/">Подать объявление</a>
   </div>
 </div>
-<div class="g-col-11 g-span-8 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
-  <ul class="b-header-menu__item__sub__wrap__col__list">
-    <li class="b-header-menu__item__sub__wrap__col__list__item"><span class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l" style="border-bottom: 0;">Недвижимость</span></li>
-    <li class="b-header-menu__item__sub__wrap__col__list__item"><a class="b-header-menu__item__sub__wrap__col__list__item__link" href="http://66.ru/realty/doska/live/">Жилая</a><span class="b-header-menu__inner-count">11823</span></li>
-    <li class="b-header-menu__item__sub__wrap__col__list__item"><a class="b-header-menu__item__sub__wrap__col__list__item__link" href="http://66.ru/realty/doska/zagorod/">Загородная</a><span class="b-header-menu__inner-count">4322</span></li>
-    <li class="b-header-menu__item__sub__wrap__col__list__item"><a class="b-header-menu__item__sub__wrap__col__list__item__link" href="http://66.ru/realty/doska/com/">Коммерческая</a><span class="b-header-menu__inner-count">3488</span></li>
-  </ul>
-</div>
-
-<div class="g-col-19 g-span-8 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_for_ads">
-  <ul class="b-header-menu__item__sub__wrap__col__list">
+<div class="g-col-11 g-span-10 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
+  <ul class="b-header-menu__item__sub__wrap__col__list facets">
+    <li class="b-header-menu__item__sub__wrap__col__list__item"><span class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l" style="border-bottom: 0;">Продажа недвижимости</span></li>
     <li class="b-header-menu__item__sub__wrap__col__list__item">
-      <ul class="b-submenu-ads">
-            <li class="b-submenu-ads__elem">
-              <a href="http://66.ru/doska/gotoviy-business/4858035-oborudovanie-dlya-proizvodstva-profnastila.html" class="b-submenu-ads__img-wrap">
-                <img src="http://bart.unistoreserve.ru/537edddde8d7b6046e9afa16" alt="Оборудование для производства профнастила" class="b-submenu-ads__img">
-              </a>
-              <p class="b-submenu-ads__desc">
-                <a href="http://66.ru/doska/gotoviy-business/4858035-oborudovanie-dlya-proizvodstva-profnastila.html" class="b-submenu-ads__link b-submenu__link">Оборудование для производства профнастила</a>
-              </p>
-
-              <p class="b-submenu-ads__price">350 000 р.</p>
-              <p></p>
-            </li>
-            <li class="b-submenu-ads__elem">
-              <a href="http://66.ru/doska/mir-muziki/4850510-prodam-apparaturu-dlya-kafe-restorana.html" class="b-submenu-ads__img-wrap">
-                <img src="http://lisa.unistoreserve.ru/537b81b8f7c0797cae67c00e" alt="Продам аппаратуру для кафе, ресторана" class="b-submenu-ads__img">
-              </a>
-              <p class="b-submenu-ads__desc">
-                <a href="http://66.ru/doska/mir-muziki/4850510-prodam-apparaturu-dlya-kafe-restorana.html" class="b-submenu-ads__link b-submenu__link">Продам аппаратуру для кафе, ресторана</a>
-              </p>
-
-              <p class="b-submenu-ads__price">32 000 р.</p>
-              <p></p>
-            </li>
-      </ul>
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link" href="/realty/prodaja-kvartir-v-novostroike-ekaterinburga/">Новостройки</a><span class="b-header-menu__inner-count">383</span>
     </li>
-    <li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link" href="/realty/prodaja-kvartir-i-komnat-v-ekaterinburge/">Квартиры и комнаты на вторичном рынке</a><span class="b-header-menu__inner-count">6592</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link" href="/realty/doska/com/?action_type=buy&amp;location=0&amp;object_type=6">Офисы</a><span class="b-header-menu__inner-count">1238</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link" href="/realty/prodaja-dom-v-okrestnostiah-ekaterinburga/">Загородные дома и коттеджи</a><span class="b-header-menu__inner-count">1790</span>
     </li>
   </ul>
 </div>
-<div class="g-col-27 g-span-8 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
-  <ul class="b-header-menu__item__sub__wrap__col__list">
+<div class="g-col-20 g-span-10 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
+  <ul class="b-header-menu__item__sub__wrap__col__list facets">
+    <li class="b-header-menu__item__sub__wrap__col__list__item"><span class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l" style="border-bottom: 0;">Аренда недвижимости</span></li>
     <li class="b-header-menu__item__sub__wrap__col__list__item">
-      <ul class="b-submenu-ads">
-            <li class="b-submenu-ads__elem">
-              <a href="http://66.ru/doska/bytovaya-technika/4861104-panasonik.html" class="b-submenu-ads__img-wrap">
-                <img src="http://lisa.unistoreserve.ru/53800525f7c0797caa66ac16" alt="Панасоник" class="b-submenu-ads__img">
-              </a>
-              <p class="b-submenu-ads__desc">
-                <a href="http://66.ru/doska/bytovaya-technika/4861104-panasonik.html" class="b-submenu-ads__link b-submenu__link">Панасоник</a>
-              </p>
-
-              <p class="b-submenu-ads__price">1 500 р.</p>
-              <p></p>
-            </li>
-            <li class="b-submenu-ads__elem">
-              <a href="http://66.ru/doska/mebel-dekor/4862437-peretyazhka-komplekta-mebeli-3-stula.html" class="b-submenu-ads__img-wrap">
-                <img src="http://lisa.unistoreserve.ru/5380a440f7c0797cac6a6523" alt="Перетяжка комплекта мебели: 3 стула" class="b-submenu-ads__img">
-              </a>
-              <p class="b-submenu-ads__desc">
-                <a href="http://66.ru/doska/mebel-dekor/4862437-peretyazhka-komplekta-mebeli-3-stula.html" class="b-submenu-ads__link b-submenu__link">Перетяжка комплекта мебели: 3 стула</a>
-              </p>
-
-              <p class="b-submenu-ads__price">5 900 р.</p>
-              <p></p>
-            </li>
-      </ul>
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link" href="/realty/arenda-kvartir-i-komnat-v-ekaterinburge/">Квартиры и комнаты</a><span class="b-header-menu__inner-count">7951</span>
     </li>
-    <li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link" href="/realty/doska/com/?action_type=lease&amp;location=0&amp;object_type=office">Офисы</a><span class="b-header-menu__inner-count">1058</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link" href="/realty/arenda-dom-v-okrestnostiah-ekaterinburga/">Загородные дома</a><span class="b-header-menu__inner-count">55</span>
     </li>
   </ul>
 </div>
-<div class="g-col-35 g-span-8 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
-  <ul class="b-header-menu__item__sub__wrap__col__list">
-    <li class="b-header-menu__item__sub__wrap__col__list__item">
-      <ul class="b-submenu-ads">
-            <li class="b-submenu-ads__elem">
-              <a href="http://66.ru/doska/antikvariat-kollekcii/4858640-sunduk-62h44h24.html" class="b-submenu-ads__img-wrap">
-                <img src="http://maggie.unistoreserve.ru/537f14cee8d7b6046e9b0c6a" alt="Сундук 62х44х24" class="b-submenu-ads__img">
-              </a>
-              <p class="b-submenu-ads__desc">
-                <a href="http://66.ru/doska/antikvariat-kollekcii/4858640-sunduk-62h44h24.html" class="b-submenu-ads__link b-submenu__link">Сундук 62х44х24</a>
-              </p>
 
-              <p class="b-submenu-ads__price">2 500 р.</p>
-              <p></p>
-            </li>
-            <li class="b-submenu-ads__elem">
-              <a href="http://66.ru/doska/ukrasheniya/4834416-koltso-zolotoe.html" class="b-submenu-ads__img-wrap">
-                <img src="http://maggie.unistoreserve.ru/53732019f7c0797cac67eeed" alt="Кольцо золотое" class="b-submenu-ads__img">
-              </a>
-              <p class="b-submenu-ads__desc">
-                <a href="http://66.ru/doska/ukrasheniya/4834416-koltso-zolotoe.html" class="b-submenu-ads__link b-submenu__link">Кольцо золотое</a>
-              </p>
-
-              <p class="b-submenu-ads__price">900 р.</p>
-              <p></p>
-            </li>
-      </ul>
-    </li>
-    <li>
-    </li>
-  </ul>
-</div></div></div></div>
+</div></div></div>
 </li>
 <li class="main-menu__elem">
   <a href="http://66.ru/realty/" class="main-menu__link">
@@ -437,8 +366,14 @@
                 <li class="submenu__elem submenu__elem_size_l">
                     <a href="http://66.ru/realty/prodaja-kvartir-v-novostroikah-ekaterinburga/" class="submenu__link">Новостройки</a>
                 </li>
+                <!--li class="submenu__elem">
+                    <a target="_blank" href="http://66.ru/go/http://www.brusnika-ural.ru/objects/kvartal_novatorov/?utm_source=66.ru&utm_medium=66ruNVSP&utm_campaign=66&origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1105); width: 95%;">
+                    <span class="case__desc">ЖК на Новаторов</span>
+                    </a>
+                </li-->
+
                 <li class="submenu__elem">
-                    <a href="http://66.ru/go/http://66.ru/realty/doska/live/zhk-kamennyij-ruchej.html?origin=head" class="case" style="background-image: url(http://s.66.ru/kr.jpg); width: 95%;">
+                    <a target="_blank" href="http://66.ru/go/http://www.brusnika-ural.ru/objects/kamennyy_ruchey/?utm_source=66ruVSP&amp;utm_medium=banner&amp;utm_campaign=66&amp;origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1215); width: 95%;">
                     <span class="case__desc">ЖК «Каменный ручей»</span>
                     </a>
                 </li>
@@ -455,8 +390,14 @@
                     <a href="http://66.ru/realty/community/" class="submenu__link">Коттеджные посёлки</a>
                 </li>
                 <li class="submenu__elem">
-                    <a href="http://66.ru/go/http://66.ru/realty/community/105/?origin=head" class="case" style="background-image: url(http://lisa.unistoreserve.ru/5406cb1fe8d7b60c1dbc8475); width: 95%;">
-                    <span class="case__desc">Золотая Горка, загородный комплекс</span>
+                    <!--a href="http://66.ru/go/http://66.ru/realty/community/114/?origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1098); width: 95%;">
+                    <span class="case__desc">Заповедник, загородный поселок</span>
+                    </a>
+                    <a href="http://66.ru/go/http://66.ru/realty/community/102/?origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1183); width: 95%;">
+                    <span class="case__desc">КП «Новый исток»</span>
+                    </a-->
+                    <a href="http://66.ru/go/http://www.zgorka.ru/?origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1187); width: 95%;" target="_blank">
+                    <span class="case__desc">Загородный комплекс «Золотая Горка»</span>
                     </a>
                 </li>
 
@@ -518,17 +459,17 @@
                 </li>
             </ul>
             <div class="grid__module grid__module_col_52 grid__module_span_85">
-                    <a href="/auto/news/166140/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/ca/1c/b3/24/ca1cb324_resizedScaled_300to130.jpg);">
-        <span class="case__desc">От 45 и старше: скучаем по стабильности с новым Nissan Sentra  <span class="case__comments">(41)</span></span>
+                    <a href="/auto/news/168263/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/bf/c6/ec/e1/bfc6ece1_resizedScaled_300to130.jpg);">
+        <span class="case__desc">«Инспектор Гаджет», или Скользкий тест революционного Audi TT  <span class="case__comments">(21)</span></span>
     </a>
-    <a href="/auto/news/166061/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/ed/0d/b9/83/ed0db983_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Блики глянца: знакомимся с обновленным NIssan Juke  <span class="case__comments">(23)</span></span>
+    <a href="/auto/news/151486/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/ef/fd/a9/6./effda96_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Хит 66.ru. Делай как Шуми: вживаемся в роль пилота гоночной «формулы»  <span class="case__comments">(5)</span></span>
     </a>
-    <a href="/auto/news/165920/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/ec/89/d2/de/ec89d2de_resizedScaled_300to130.jpg);">
-        <span class="case__desc">2WD и два сцепления: пытаем моноприводный Ford EcoSport снегопадами  <span class="case__comments">(16)</span></span>
+    <a href="/auto/news/164387/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/5c/63/ea/84/5c63ea84_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Хит 66.ru. Масти Rosso Corsa: объезжаем необузданную Ferrari 458 Italia Spider  <span class="case__comments">(21)</span></span>
     </a>
-    <a href="/auto/news/165810/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/6b/87/65/77/6b876577_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Никто не услышит: знакомимся с новым Peugeot 508  <span class="case__comments">(15)</span></span>
+    <a href="/auto/news/159353/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/74/5d/71/1e/745d711e_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Хит 66.ru. Бытовуха: тестируем суперкар Nissan GT-R в роли семейного автомобиля  <span class="case__comments">(27)</span></span>
     </a>
 
             </div>
@@ -585,17 +526,17 @@
                 </li>
             </ul>
             <div class="grid__module grid__module_col_1 grid__module_span_70">
+    <a href="/news/freetime/167839/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/29/99/d5/14/2999d514_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Первый блокбастер года: стоит ли смотреть «Исход: цари и боги»?  <span class="case__comments">(12)</span></span>
+    </a>
     <a href="/news/freetime/165232/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/51/c0/97/ab/51c097ab_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Пытка спецэффектами: авторы фильма «Река» задешево порылись в подсознании Мавроди  <span class="case__comments">(28)</span></span>
+        <span class="case__desc">Пытка спецэффектами: авторы фильма «Река» задешево порылись в подсознании Мавроди  <span class="case__comments">(30)</span></span>
     </a>
     <a href="/news/freetime/161313/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/81/41/11/a0/814111a0_resizedScaled_300to130.jpg);">
         <span class="case__desc">Отцы vs дети: смотрим главный блокбастер лета — «Неудержимые-3»  <span class="case__comments">(12)</span></span>
     </a>
     <a href="/news/freetime/161016/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/63/d9/ba/4d/63d9ba4d_resizedScaled_300to130.jpg);">
         <span class="case__desc">Панцирь носим как рубашки: смотрим, что с «Черепашками-ниндзя» годы сделали  <span class="case__comments">(20)</span></span>
-    </a>
-    <a href="/news/freetime/153576/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/45/1a/40/c./451a40c_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Из жизни животных: смотрим «Жажду скорости / Need For Speed»  <span class="case__comments">(37)</span></span>
     </a>
 
 
@@ -628,17 +569,17 @@
                 </li>
             </ul>
             <div class="grid__module grid__module_col_1 grid__module_span_70">
+    <a href="/news/freetime/167308/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/da/9f/af/86/da9faf86_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Небритый повар. Антисанкционная закуска по-русски с яблоком и творожным сыром  <span class="case__comments">(12)</span></span>
+    </a>
+    <a href="/news/freetime/167001/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/b4/94/01/2d/b494012d_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Небритый повар. Тартарим по-французски с авокадо и красной икрой</span>
+    </a>
+    <a href="/news/freetime/166713/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/d8/c4/e5/b2/d8c4e5b2_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Небритый повар. Маринуем, жарим и запекаем новогоднюю английскую курочку  <span class="case__comments">(8)</span></span>
+    </a>
     <a href="/news/freetime/166393/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/95/60/f7/5c/9560f75c_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Небритый повар. Нарезаем новогодний салат по итальянской системе  <span class="case__comments">(5)</span></span>
-    </a>
-    <a href="/news/freetime/156255/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/76/36/ec/67/7636ec67_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Небритый повар жарит всё. 10 рецептов майского шашлыка  <span class="case__comments">(19)</span></span>
-    </a>
-    <a href="/news/freetime/149641/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/78/63/e3/40/7863e340_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Небритый повар. 10 разных оливье  <span class="case__comments">(18)</span></span>
-    </a>
-    <a href="/news/freetime/149294/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/b3/a5/78/53/b3a57853_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Небритый повар. Репетируем праздничный ужин  <span class="case__comments">(20)</span></span>
+        <span class="case__desc">Небритый повар. Нарезаем новогодний салат по итальянской системе  <span class="case__comments">(19)</span></span>
     </a>
 
 
@@ -689,17 +630,17 @@
             </ul>
 
             <div class="grid__module grid__module_col_1 grid__module_span_70">
-    <a href="/health/news/164539/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/6f/2a/5d/12/6f2a5d12_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Смотри, что пьешь. Испытываем фильтры водопроводной водой Екатеринбурга  <span class="case__comments">(64)</span></span>
+    <a href="/health/news/167935/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/53/a7/af/c6/53a7afc6_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Тотальный анализ: в дома Уралмаша поставляют ржавую воду с марганцем  <span class="case__comments">(17)</span></span>
     </a>
-    <a href="/health/news/164201/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/74/b5/62/aa/74b562aa_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Смотри, что пьешь. В водопроводной воде города нашли признаки жизни  <span class="case__comments">(9)</span></span>
+    <a href="/news/society/163462/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/61/33/c0/dc/6133c0dc_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Хит 66.ru. Зловонные озера и поля нечистот: с высоты следим за большим ремонтом городской канализации  <span class="case__comments">(29)</span></span>
     </a>
-    <a href="/health/news/163865/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/7b/52/34/b1/7b5234b1_resizedScaled_300to130.jpg);">
-        <span class="case__desc">Смотри, что пьешь. Екатеринбургские родники источают нитраты  <span class="case__comments">(41)</span></span>
+    <a href="/health/news/167546/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/39/da/1a/12/39da1a12_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Тотальный анализ доказал: СТК обманула, в центре города из-под крана течет ржавая вода  <span class="case__comments">(25)</span></span>
     </a>
-    <a href="/health/news/162759/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/e7/41/62/d4/e74162d4_resizedScaled_300to130.jpg);">
-        <span class="case__desc">В поисках наркотиков в визовском пруду прокуроры проверят свалки  <span class="case__comments">(3)</span></span>
+    <a href="/health/news/167450/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/bd/b2/de/70/bdb2de70_resizedScaled_300to130.jpg);">
+        <span class="case__desc">«Пахнет? Сообщайте адреса». Вонючий кипяток в городских сетях разбавили чистой водой  <span class="case__comments">(23)</span></span>
     </a>
 
             </div>
@@ -745,7 +686,13 @@
 </li>
 </ul>
 <ul class="submenu__list grid__module grid__module_col_21 grid__module_span_20">
-  </ul>
+  <li class="submenu__elem">
+  <a href="http://study.66.ru/" class="submenu__link">Образование в Екатеринбурге</a>
+</li>
+<li class="submenu__elem">
+  <a href="" class="submenu__link"></a>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -753,7 +700,7 @@
 </div>
 </li>
 <li class="main-menu__elem" style="display: none;">
-  <a href="http://mail.66.ru" class="main-menu__link">
+  <a href="http://66.ru/mail/" class="main-menu__link">
   Почта</a>
 <div class="main-menu__sub main-menu__sub_width_global submenu" style="width: 1585px; left: -268.34375px;">
   <div class="layout">
@@ -1214,6 +1161,14 @@
   <a class="sub__link" href="http://66.ru/citymap/">
   Карта Екатеринбурга</a>
 </li>
+<li class="sub__elem ">
+  <a class="sub__link" href="http://study.66.ru/">
+  Образование в Екатеринбурге</a>
+</li>
+<li class="sub__elem ">
+  <a class="sub__link" href="">
+  </a>
+</li>
 </ul>
 </div>
 </li>
@@ -1221,7 +1176,7 @@
   <div class="sub">
   <ul class="sub__list sub__list_separator_left">
   <li class="sub__elem sub__elem_size_l">
-  <a class="sub__link" href="http://mail.66.ru">
+  <a class="sub__link" href="http://66.ru/mail/">
   Почта</a>
 </li>
 </ul>

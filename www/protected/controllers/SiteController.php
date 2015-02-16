@@ -6,15 +6,44 @@ class SiteController extends Controller
 
     public $layout='base';
 
+    public static function getTypes()
+    {
+        return array(
+            Institution::TYPE_VUZ => array (
+                'title' => 'Лучшие ВУЗы Екатеринбурга',
+                'listTitle' => 'Все ВУЗы Екатеринбурга',
+                'limit' => 6,
+                'listLimit' => 8,
+                'alias' => 'vuz'),
+            Institution::TYPE_COLLEGE => array (
+                'title' => 'Лучшие колледжи и техникумы Екатеринбурга',
+                'listTitle' => 'Все колледжи Екатеринбурга',
+                'limit' => 6,
+                'listLimit' => 8,
+                'alias' => 'college'),
+            Institution::TYPE_LINGVO => array (
+                'title' => 'Лучшие языковые центры Екатеринбурга',
+                'listTitle' => 'Все языковые центры Екатеринбурга',
+                'limit' => 3,
+                'listLimit' => 8,
+                'alias' => 'linvo'),
+            Institution::TYPE_BUSINESS => array (
+                'title' => 'Лучшее бизнес-образование Екатеринбурга',
+                'listTitle' => 'Бизнес образование в Екатеринбурге',
+                'listLimit' => 8,
+                'limit' => 3, 'alias' => 'bo'),
+            Institution::TYPE_ADDITIONAL => array (
+                'title' => 'Лучшее дополнительное образование Екатеринбурга',
+                'listTitle' => 'Дополнительное образование в Екатеринбурге',
+                'limit' => 3,
+                'listLimit' => 8,
+                'alias' => 'do'),
+        );
+    }
+
     public function actionIndex()
     {
-        $types = array(
-            Institution::TYPE_VUZ => array ('title' => 'Лучшие ВУЗы Екатеринбурга', 'listTitle' => 'Все ВУЗы Екатеринбурга', 'limit' => 6),
-            Institution::TYPE_COLLEGE => array ('title' => 'Лучшие колледжи и техникумы Екатеринбурга', 'listTitle' => 'Все колледжи Екатеринбурга', 'limit' => 6),
-            Institution::TYPE_LINGVO => array ('title' => 'Лучшие языковые центры Екатеринбурга', 'listTitle' => 'Все языковые центры Екатеринбурга', 'limit' => 6),
-            Institution::TYPE_BUSINESS => array ('title' => 'Лучшее бизнес-образование Екатеринбурга', 'listTitle' => 'Бизнес образование в Екатеринбурге', 'limit' => 6),
-            Institution::TYPE_ADDITIONAL => array ('title' => 'Лучшее дополнительное образование Екатеринбурга', 'listTitle' => 'Дополнительное образование в Екатеринбурге', 'limit' => 6),
-        );
+        $types = self::getTypes();
 
         // весь список
         $itemsArray = array();        
@@ -23,24 +52,17 @@ class SiteController extends Controller
             $limit = 100;
             $offset = 0;
             $criteria = new CDbCriteria(array(
-                'limit' => $limit,
+                'limit' => $value['listLimit'],
                 'offset' => $offset*$limit,
             ));
+            $itemsTotal[$key] = Institution::model()->onSite()->byType($key)->count();
             $items = Institution::model()->onSite()->byType($key)->orderDefault()->findAll($criteria);
-            while ($items) {
-                foreach ($items as $item) {
-                    $itemsArray[$key][] = array(
-                        'id' => $item->id,
-                        'title' => $item->title,
-                        'fullTitle' => $item->fullTitle,
-                    );
-                }
-                $offset++;
-                $criteria = new CDbCriteria(array(
-                    'limit' => $limit,
-                    'offset' => $offset*$limit,
-                ));
-                $items = Institution::model()->onSite()->orderDefault()->findAll($criteria);
+            foreach ($items as $item) {
+                $itemsArray[$key][] = array(
+                    'id' => $item->id,
+                    'title' => $item->title,
+                    'fullTitle' => $item->fullTitle,
+                );
             }
         }
 
@@ -59,10 +81,80 @@ class SiteController extends Controller
 
         $this->setPageTitle('Университеты, колледжи и институты Екатеринбурга &mdash; '.Yii::app()->params['siteName']);
         $this->render('main', array(
+            'itemsTotal' => $itemsTotal,
             'list' => $itemsArray,
             'imgBlocks' => $imgBlocks,
             'types' => $types,
             'news' => $news,
+        ));
+    }
+
+    public function actionType()
+    {
+        $typeParam = isset($_GET['type']) ? (string)$_GET['type'] : false;
+        if (!$typeParam) {
+            throw new CHttpException(404, 'Страница не найдена');
+        }
+        $types = self::getTypes();
+        $type = false;
+        foreach ($types as $key => $value) {
+            if ($types[$key]['alias'] == $typeParam) {
+                $type = $types[$key];
+                break;
+            }
+        }
+
+        if (!$type) {
+            throw new CHttpException(404, 'Страница не найдена');
+        }
+
+        $itemsArray = array();        
+        $limit = 100;
+        $offset = 0;
+        $criteria = new CDbCriteria(array(
+            'limit' => $limit,
+            'offset' => $offset*$limit,
+        ));
+        $items = Institution::model()->onSite()->byType($key)->orderDefault()->findAll($criteria);
+        while ($items) {
+            foreach ($items as $item) {
+                $itemsArray[] = array(
+                    'id' => $item->id,
+                    'title' => $item->title,
+                    'fullTitle' => $item->fullTitle,
+                );
+            }
+            $offset++;
+            $criteria = new CDbCriteria(array(
+                'limit' => $limit,
+                'offset' => $offset*$limit,
+            ));
+            $items = Institution::model()->onSite()->byType($key)->orderDefault()->findAll($criteria);
+        }
+
+        foreach ($itemsArray as $item) {
+            $keys[mb_strtoupper(mb_substr($item['title'], 0, 1, 'UTF8'), 'UTF8')]['rows'][] = $item;
+        }
+        $col_num = 3;
+        $rows_in_col = ceil(sizeof($itemsArray)/$col_num);
+        $col = 0;
+        $rows = array();
+        $cur_key = false;
+        $cur_count = 0;
+        foreach ($keys as $k=>$row) {
+            $rows[$col][$k] = $row;
+            $cur_count += sizeof($row['rows']);
+            if ($cur_count>=$rows_in_col) {
+                $col++;
+                $cur_count = 0;
+            }
+        }
+
+
+        $this->setPageTitle($type['title'] . '. Полный список учебных заведений &mdash; '.Yii::app()->params['siteName']);
+        $this->render('typeList', array(
+            'rows' => $rows,
+            'title' => $type['title'],
         ));
     }
 

@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="http://ptrck.ru/pt2.js"></script>
     <link type="text/css" rel="stylesheet" href="http://t.66.ru/external/fonts/PT_Sans_Narrow.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->request->staticUrl; ?>css/client.css" media="all">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->staticUrl; ?>css/base.css" media="all">
     <script src="<?php echo Yii::app()->request->staticUrl; ?>js/client.js" type="text/javascript"></script>
 
 	<title><?php echo $this->pageTitle; ?></title>
